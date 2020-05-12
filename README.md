@@ -6,5 +6,5 @@ This project is an system for recruitment and selection for a company (GSW), whe
 # Team
 
 - Scrum Master: Isabella Rosa
-- PEO: Gabriel Azevedo
+- PO: Gabriel Azevedo
 - Devs: Ângelo Lima, Larissa Miho e Maria Eduarda
