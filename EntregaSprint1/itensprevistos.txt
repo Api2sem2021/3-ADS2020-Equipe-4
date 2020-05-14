@@ -1,4 +1,4 @@
 Arquitetura
 User Stories
 Wireframes
-Os slides estão na pasta "LinkExecucao_LinkPPT"
+Os slides estão no doc "LinkExecucao_LinkPPT"
