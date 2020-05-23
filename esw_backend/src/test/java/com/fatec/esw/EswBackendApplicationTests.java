@@ -1,4 +1,4 @@
-package com.esw;
+package com.fatec.esw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
