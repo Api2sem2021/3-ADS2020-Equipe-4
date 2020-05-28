@@ -8,19 +8,19 @@ Este projeto é um sistema de recrutamento e seleção para a empresa GSW, onde 
 - Devs: Ângelo Lima, Larissa Miho e Maria Eduarda
 
 # Sprint 0
-Definição de Stakeholders
-Plano de Desenvolvimento de Software
-Técnicas e Ferramentas aplicáveis
-BPMN
+- Definição de Stakeholders
+- Plano de Desenvolvimento de Software
+- Técnicas e Ferramentas aplicáveis
+- BPMN
 
 # Sprint 1
-Arquitetura
-User Stories
-Wireframes
-Dicionário de Dados
+- Arquitetura
+- User Stories
+- Wireframes
+- Dicionário de Dados
 
 # Sprint 2
-Diagrama de Domínio
-Cenário de Testes UC.01.01
-Início UC.02.01 - Página de Captura
-Diagrama de Classes Parcial
+- Diagrama de Domínio
+- Cenário de Testes UC.01.01 - CT 1
+- Início UC.02.01 - Página de Captura
+- Diagrama de Classes Parcial
