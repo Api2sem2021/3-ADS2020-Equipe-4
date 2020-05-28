@@ -21,16 +21,17 @@ public class Candidato implements Serializable{
 	private String nome;
 	private String telefone;
 	private String curriculo;
-	private String status;
-	private String facebook;
-	private String linkedin;
+	private String status; 
+	private String facebook; 
+	private String linkedin; 
+	private String marcadores;
 		
 	public Candidato() {
 		
 	}
 
 	public Candidato(Long id, String cpf, String email, String nome, String telefone, String curriculo, String status,
-			String facebook, String linkedin) {
+			String facebook, String linkedin, String marcadores) {
 		super();
 		this.id = id;
 		this.cpf = cpf;
@@ -41,7 +42,11 @@ public class Candidato implements Serializable{
 		this.status = status;
 		this.facebook = facebook;
 		this.linkedin = linkedin;
+		this.marcadores = marcadores;
 	}
+
+	
+
 
 	public Long getId() {
 		return id;
@@ -113,6 +118,14 @@ public class Candidato implements Serializable{
 
 	public void setLinkedin(String linkedin) {
 		this.linkedin = linkedin;
+	}
+
+	public String getMarcadores() {
+		return marcadores;
+	}
+
+	public void setMarcadores(String marcadores) {
+		this.marcadores = marcadores;
 	}
 
 	@Override
