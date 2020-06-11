@@ -1,11 +1,16 @@
 package com.fatec.esw.domain;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Candidato implements Serializable{
@@ -25,6 +30,13 @@ public class Candidato implements Serializable{
 	private String facebook; 
 	private String linkedin; 
 	private String marcadores;
+	
+	@ManyToMany(fetch= FetchType.LAZY)
+	@JoinTable(
+	        name = "vaga_candidato",
+	        joinColumns = { @JoinColumn(name = "candidato") },
+	        inverseJoinColumns = { @JoinColumn(name = "vaga") } )
+	private List<Vaga> vagas;
 		
 	public Candidato() {
 		
@@ -43,6 +55,17 @@ public class Candidato implements Serializable{
 		this.facebook = facebook;
 		this.linkedin = linkedin;
 		this.marcadores = marcadores;
+	}
+	
+	public Candidato(String cpf, String email, String nome, String telefone, String curriculo, String facebook, String linkedin) {
+		super();
+		this.cpf = cpf;
+		this.email = email;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.curriculo = curriculo;
+		this.facebook = facebook;
+		this.linkedin = linkedin;
 	}
 
 	

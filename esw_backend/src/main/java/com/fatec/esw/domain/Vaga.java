@@ -1,11 +1,7 @@
 package com.fatec.esw.domain;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,10 +22,6 @@ public class Vaga implements Serializable {
 	private String requisitos;
 	private String observações;
 	private String data;//Modificar para data
-	
-	@ElementCollection
-	@CollectionTable(name="CANDIDATO_VAGA")
-	private List<Candidato> candidatos = new ArrayList<Candidato>(); 
 	
 	public Vaga() {
 
@@ -112,9 +104,6 @@ public class Vaga implements Serializable {
 		this.data = data;
 	}
 	
-	public void adicionarCandidato(Candidato candidato){
-		this.candidatos.add(candidato);
-	}
 
 	@Override
 	public int hashCode() {

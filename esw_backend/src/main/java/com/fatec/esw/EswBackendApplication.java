@@ -45,10 +45,6 @@ public class EswBackendApplication implements CommandLineRunner{
 		Vaga vaga2 = new Vaga(null,"Estagiário C#","https://www.imagem.jpg","Estagiário C#","Conhecimento básico em C# ","C# Básico","Carga horária de 6hrs p/dia, Salário 1.050,00 Reais","28/11/2020");
 		vagaRepository.save(vaga1);
 		vagaRepository.save(vaga2);
-		vaga1.adicionarCandidato(candidato1);
-		vaga2.adicionarCandidato(candidato2);
-		vagaRepository.save(vaga1);
-		vagaRepository.save(vaga2);
 	}
 
 }
