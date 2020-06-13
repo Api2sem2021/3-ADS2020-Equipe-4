@@ -24,3 +24,12 @@ Este projeto é um sistema de recrutamento e seleção para a empresa GSW, onde 
 - Cenário de Testes UC.01.01 - CT 1
 - Início UC.02.01 - Página de Captura
 - Diagrama de Classes Parcial
+Branch para desenvolvimento: Develop
+
+# Sprint 3
+- Revisão User Stories (Não necessitou de alterações)
+- Revisão Wireframes (Não necessitou de alterações)
+- Revisão Testes (Não necessitou de alterações)
+- Estimativa de Esforço no Trello
+- Diagrama de Classes (Não necessitou de alterações)
+- Funcionalidades implementadas: Início do front-end referente ao UC.02.01 na branch develop
