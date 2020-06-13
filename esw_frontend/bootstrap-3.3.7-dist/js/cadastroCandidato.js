@@ -10,13 +10,14 @@ function cadastrar(){
         type: "POST",
         url: "~/esw_backend/src/main/java/com/fatec/esw/resources/CandidatoResource.java/cadastrar",
         data: {
-            id: 0,
+            id: null,
             nome: nome,
             cpf: cpf,
             email: email,
             telefone: telefone,
             curriculo: curriculo
         },
+        dataType: "JSON",
         success: function (msg) {
             if (msg) {
                 alert("Cadastrado com sucesso!");
@@ -24,7 +25,6 @@ function cadastrar(){
             } else {
                 alert("Não foi possível cadastrar!");
             }
-        },
-        dataType: "JSON"
+        }
       });
 }
