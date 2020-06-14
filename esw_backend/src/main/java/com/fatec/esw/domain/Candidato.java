@@ -27,8 +27,6 @@ public class Candidato implements Serializable{
 	private String telefone;
 	private String curriculo;
 	private String status; 
-	private String facebook; 
-	private String linkedin; 
 	private String marcadores;
 	
 	@ManyToMany(fetch= FetchType.LAZY)
@@ -43,7 +41,7 @@ public class Candidato implements Serializable{
 	}
 
 	public Candidato(Long id, String cpf, String email, String nome, String telefone, String curriculo, String status,
-			String facebook, String linkedin, String marcadores) {
+			String marcadores) {
 		super();
 		this.id = id;
 		this.cpf = cpf;
@@ -52,20 +50,16 @@ public class Candidato implements Serializable{
 		this.telefone = telefone;
 		this.curriculo = curriculo;
 		this.status = status;
-		this.facebook = facebook;
-		this.linkedin = linkedin;
 		this.marcadores = marcadores;
 	}
 	
-	public Candidato(String cpf, String email, String nome, String telefone, String curriculo, String facebook, String linkedin) {
+	public Candidato(String cpf, String email, String nome, String telefone, String curriculo) {
 		super();
 		this.cpf = cpf;
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.curriculo = curriculo;
-		this.facebook = facebook;
-		this.linkedin = linkedin;
 	}
 
 	
@@ -125,22 +119,6 @@ public class Candidato implements Serializable{
 
 	public void setStatus(String status) {
 		this.status = status;
-	}
-
-	public String getFacebook() {
-		return facebook;
-	}
-
-	public void setFacebook(String facebook) {
-		this.facebook = facebook;
-	}
-
-	public String getLinkedin() {
-		return linkedin;
-	}
-
-	public void setLinkedin(String linkedin) {
-		this.linkedin = linkedin;
 	}
 
 	public String getMarcadores() {
