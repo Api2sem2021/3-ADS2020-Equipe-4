@@ -8,7 +8,7 @@ function cadastrar(){
 
     $.ajax({
         type: "POST",
-        url: "~/esw_backend/src/main/java/com/fatec/esw/resources/CandidatoResource.java/cadastrar",
+        url: "../../../esw_backend/src/main/java/com/fatec/esw/resources/CandidatoResource.java/cadastrar",
         data: {
             id: null,
             nome: nome,
