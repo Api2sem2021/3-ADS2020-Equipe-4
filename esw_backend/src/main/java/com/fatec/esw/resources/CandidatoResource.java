@@ -31,13 +31,6 @@ public class CandidatoResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
-//	@PostMapping("/inscricao")
-//	public ResponseEntity<Candidato> cadastrar( @RequestAttribute String cpf, @RequestAttribute String email, @RequestAttribute String nome, @RequestAttribute String telefone,
-//			@RequestAttribute String curriculo, @RequestAttribute String facebook, @RequestAttribute String linkedin) {
-//		Candidato candidato = candidatoService.cadastrar(cpf, email, nome, telefone, curriculo, facebook, linkedin);
-//		return ResponseEntity.ok(candidato);
-//	}
-	
 	@PostMapping()
 	public ResponseEntity<CandidatoDTO> cadastrar( @RequestBody CandidatoDTO candidato) {
 		candidatoService.cadastrar(candidato);

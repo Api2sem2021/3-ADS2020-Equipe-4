@@ -22,10 +22,6 @@ public class CandidatoDTO {
 	@NotNull
 	private String status; 
 	@NotNull
-	private String facebook; 
-	@NotNull
-	private String linkedin; 
-	@NotNull
 	private String marcadores;
 	
 	private List<Long> vagas;
@@ -36,21 +32,18 @@ public class CandidatoDTO {
 	
 
 
-	public CandidatoDTO(String cpf, String email, String nome, String telefone, String curriculo, String facebook,
-			String linkedin) {
+	public CandidatoDTO(String cpf, String email, String nome, String telefone, String curriculo) {
 		this.cpf = cpf;
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.curriculo = curriculo;
-		this.facebook = facebook;
-		this.linkedin = linkedin;
 	}
 
 
 
 	public Candidato inserirEntidade(CandidatoDTO candidatoDTO) {
-		return new Candidato(cpf,email,nome,telefone,curriculo,facebook,linkedin);
+		return new Candidato(cpf,email,nome,telefone,curriculo);
 	}
 
 	public Long getId() {
@@ -109,28 +102,24 @@ public class CandidatoDTO {
 		this.status = status;
 	}
 
-	public String getFacebook() {
-		return facebook;
-	}
-
-	public void setFacebook(String facebook) {
-		this.facebook = facebook;
-	}
-
-	public String getLinkedin() {
-		return linkedin;
-	}
-
-	public void setLinkedin(String linkedin) {
-		this.linkedin = linkedin;
-	}
-
 	public String getMarcadores() {
 		return marcadores;
 	}
 
 	public void setMarcadores(String marcadores) {
 		this.marcadores = marcadores;
+	}
+
+
+
+	public List<Long> getVagas() {
+		return vagas;
+	}
+
+
+
+	public void setVagas(List<Long> vagas) {
+		this.vagas = vagas;
 	}
 	
 	

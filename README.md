@@ -1,5 +1,5 @@
 # Projeto ESII
-<<<<<<< HEAD
+
 Repositório para o Projeto de Engenharia de Software II na FATEC SJC
 Este projeto é um sistema de recrutamento e seleção para a empresa GSW, onde as pessoas podem se candidatar às vagas de trabalho e o administrador de sistema vai ver seus status, administrar vagas, etc.
 
@@ -25,7 +25,13 @@ Este projeto é um sistema de recrutamento e seleção para a empresa GSW, onde 
 - Cenário de Testes UC.01.01 - CT 1
 - Início UC.02.01 - Página de Captura
 - Diagrama de Classes Parcial
-=======
 
-Branch p/ codificação do projeto
->>>>>>> ea6121464e071ad3b080f798b3f29ae7e4fd01cc
+Branch p/ codificação do projeto: develop
+
+# Sprint 3
+- Revisão User Stories (Não necessitou de alterações)
+- Revisão Wireframes (Não necessitou de alterações)
+- Revisão Testes (Não necessitou de alterações)
+- Estimativa de Esforço no Trello
+- Diagrama de Classes (Não necessitou de alterações)
+- Funcionalidades implementadas: Início do front-end referente ao UC.02.01 na branch develop

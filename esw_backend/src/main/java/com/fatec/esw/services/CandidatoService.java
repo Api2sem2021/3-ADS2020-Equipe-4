@@ -22,22 +22,6 @@ public class CandidatoService {
 		return obj.orElse(null);
 	}
 	
-//	public Candidato cadastrar(String cpf, String email, String nome, String telefone, String curriculo, String facebook, String linkedin) {
-//
-//		CandidatoDTO candidatoDTO =  new CandidatoDTO(cpf, email, nome, telefone, curriculo, facebook, linkedin);
-//		Candidato candidato = candidatoDTO.inserirEntidade(candidatoDTO);
-//		
-//		candidato.setCpf(candidatoDTO.getCpf() != null ? candidatoDTO.getCpf() : null);
-//		candidato.setEmail(candidatoDTO.getEmail() != null ? candidatoDTO.getEmail() : null);
-//		candidato.setNome(candidatoDTO.getNome() != null ? candidatoDTO.getNome() : null);
-//		candidato.setTelefone(candidatoDTO.getTelefone() != null ? candidatoDTO.getTelefone() : null);
-//		candidato.setCurriculo(candidatoDTO.getCurriculo() != null ? candidatoDTO.getCurriculo() : null);
-//		candidato.setFacebook(candidatoDTO.getFacebook() != null ? candidatoDTO.getFacebook() : null);
-//		candidato.setLinkedin(candidatoDTO.getLinkedin() != null ? candidatoDTO.getLinkedin() : null);
-//		candidatoRepository.save(candidato);
-//		return candidato;
-//	}
-	
 	public Candidato cadastrar(CandidatoDTO candidatoDTO) {
 
 		Candidato candidato = candidatoDTO.inserirEntidade(candidatoDTO);
@@ -47,8 +31,6 @@ public class CandidatoService {
 		candidato.setNome(candidatoDTO.getNome() != null ? candidatoDTO.getNome() : null);
 		candidato.setTelefone(candidatoDTO.getTelefone() != null ? candidatoDTO.getTelefone() : null);
 		candidato.setCurriculo(candidatoDTO.getCurriculo() != null ? candidatoDTO.getCurriculo() : null);
-		candidato.setFacebook(candidatoDTO.getFacebook() != null ? candidatoDTO.getFacebook() : null);
-		candidato.setLinkedin(candidatoDTO.getLinkedin() != null ? candidatoDTO.getLinkedin() : null);
 		candidatoRepository.save(candidato);
 		return candidato;
 	}
