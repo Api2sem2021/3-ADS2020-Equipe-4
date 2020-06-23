@@ -5,6 +5,7 @@ function cadastrar(){
     var email = $("#email").val();
     var telefone = $("#telefone").val();
     var curriculo = $("#curriculo").val();
+    var marcadores = "";
 
     $.ajax({
         type: "POST",
@@ -15,7 +16,8 @@ function cadastrar(){
             cpf: cpf,
             email: email,
             telefone: telefone,
-            curriculo: curriculo
+            curriculo: curriculo,
+            marcadores: marcadores
         },
         dataType: "JSON",
         success: function (msg) {
