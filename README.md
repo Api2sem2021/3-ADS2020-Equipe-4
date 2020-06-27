@@ -33,3 +33,12 @@ Branch para desenvolvimento: Develop
 - Estimativa de Esforço no Trello
 - Diagrama de Classes (Não necessitou de alterações)
 - Funcionalidades implementadas: Início do front-end referente ao UC.02.01 na branch develop
+
+# Sprint 4
+- Revisão User Stories (Não necessitou de alterações)
+- Revisão Wireframes (Não necessitou de alterações)
+- Revisão Testes - Cenários CT 2, CT 3 E CT 4 criados
+- Estimativa de Esforço no Trello
+- Diagrama de Classes (Não necessitou de alterações)
+- Funcionalidades implementadas: Front-end HTML, CSS, Bootstrap e Javascript
+- Estudo da ligação do front-end e back-end
