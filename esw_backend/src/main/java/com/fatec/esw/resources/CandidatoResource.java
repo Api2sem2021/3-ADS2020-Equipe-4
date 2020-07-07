@@ -4,6 +4,7 @@ import java.net.URI;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -16,6 +17,7 @@ import com.fatec.dto.CandidatoDTO;
 import com.fatec.esw.domain.Candidato;
 import com.fatec.esw.services.CandidatoService;
 
+@CrossOrigin()
 @RestController
 @RequestMapping(value="/candidatos")
 public class CandidatoResource {
@@ -24,7 +26,6 @@ public class CandidatoResource {
 	@Autowired
 	private CandidatoService candidatoService;
 	
-	//Tipo especial que encapsula varias informações de uma resposta http
 	@GetMapping("/{id}")
 	public ResponseEntity<?> find(@PathVariable("id") Long id) {
 		Candidato obj = candidatoService.find(id);
