@@ -10,13 +10,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './controle-erro/controle-erro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
-import { LoginComponent } from './login/login.component';
 import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
     StatusCandidatoComponent
   ],
   imports: [

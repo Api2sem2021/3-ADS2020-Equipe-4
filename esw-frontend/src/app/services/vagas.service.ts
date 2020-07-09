@@ -20,6 +20,6 @@ import { Observable } from 'rxjs';
     }
 
     public buscarVagas(): Observable<any> {
-        return this.http.get<Vaga>(`http://localhost:8080/candidatos/buscarTodas`).pipe();
+        return this.http.get<Vaga>(`http://localhost:8080/vagas/buscarTodas`).pipe();
       }
 }

@@ -1,3 +1,5 @@
+import { Vaga } from './../model/vaga';
+import { VagasService } from './../services/vagas.service';
 import { Login } from './../model/login';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -11,8 +13,11 @@ export class PaginaInicialComponent implements OnInit {
 
   formulario: FormGroup;
   login: Login = new Login();
+  vagas: any[];
+  contador: number;
   constructor(
     private formBuilder: FormBuilder,
+    private vagasService: VagasService
   ) {
     this.formulario = this.formBuilder.group({
 
@@ -23,6 +28,8 @@ export class PaginaInicialComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.contador = 0;
+    this.buscarVagas();
   }
 
   logar() {
@@ -46,5 +53,18 @@ export class PaginaInicialComponent implements OnInit {
       !this.formulario.get(campo).valid &&
       (this.formulario.get(campo).touched || this.formulario.get(campo).dirty));
     }
+
+  buscarVagas() {
+    this.vagasService.buscarVagas().subscribe( res => {
+          this.vagas = res;
+          console.log(this.vagas);
+      }
+    );
+  }
+
+  somarContador() {
+    this.contador += this.contador + 1;
+  }
+
 
 }

@@ -34,7 +34,7 @@ public class CandidatoResource {
 	}
 	
 	@GetMapping("/buscarTodos")
-	public ResponseEntity<?> findAll() {
+	public ResponseEntity<List<Candidato>> findAll() {
 		List<Candidato> listaCandidatos = candidatoService.findAll();
 		return ResponseEntity.ok().body(listaCandidatos);
 	}
