@@ -1,5 +1,6 @@
 package com.fatec.esw.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,11 @@ public class CandidatoService {
 	public Candidato find(Long id) {
 		Optional<Candidato> obj = candidatoRepository.findById(id);
 		return obj.orElse(null);
+	}
+	
+	public List<Candidato> findAll() {
+		List<Candidato> listaCandidatos = candidatoRepository.findAll();
+		return listaCandidatos;
 	}
 	
 	public Candidato cadastrar(CandidatoDTO candidatoDTO) {

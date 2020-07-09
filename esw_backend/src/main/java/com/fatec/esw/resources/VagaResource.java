@@ -14,36 +14,36 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.fatec.dto.CandidatoDTO;
-import com.fatec.esw.domain.Candidato;
-import com.fatec.esw.services.CandidatoService;
+import com.fatec.dto.VagaDTO;
+import com.fatec.esw.domain.Vaga;
+import com.fatec.esw.services.VagaService;
 
 @CrossOrigin()
 @RestController
-@RequestMapping(value="/candidatos")
-public class CandidatoResource {
+@RequestMapping(value="/vagas")
+public class VagaResource {
 
 	//Associada a um dos verbos do http
 	@Autowired
-	private CandidatoService candidatoService;
+	private VagaService vagaService;
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<?> find(@PathVariable("id") Long id) {
-		Candidato obj = candidatoService.find(id);
+		Vaga obj = vagaService.find(id);
 		return ResponseEntity.ok().body(obj);
 	}
 	
-	@GetMapping("/buscarTodos")
+	@GetMapping("/buscarTodas")
 	public ResponseEntity<?> findAll() {
-		List<Candidato> listaCandidatos = candidatoService.findAll();
-		return ResponseEntity.ok().body(listaCandidatos);
+		List<Vaga> listaVagas = vagaService.findAll();
+		return ResponseEntity.ok().body(listaVagas);
 	}
 	
 	@PostMapping()
-	public ResponseEntity<CandidatoDTO> cadastrar( @RequestBody CandidatoDTO candidato) {
-		candidatoService.cadastrar(candidato);
+	public ResponseEntity<VagaDTO> cadastrar( @RequestBody VagaDTO vaga) {
+		vagaService.cadastrar(vaga);
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
-				.buildAndExpand(candidato.getId()).toUri();
+				.buildAndExpand(vaga.getId()).toUri();
 		return ResponseEntity.created(uri).build();
 	}
 }
