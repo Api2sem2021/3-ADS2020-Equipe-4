@@ -1,0 +1,86 @@
+<div>
+  <h1>
+    Cadastro de Funcionario
+  </h1>
+</div>
+<br>
+<form [formGroup]="formulario" class="form-horizontal">
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="nome" class="control-label">Nome</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="Nome">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="cpf" class="control-label">CPF</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="cpf" id="cpf" placeholder="Ex.: 000.000.000-00">
+    </div>
+
+  </div>
+
+  <div class="form-group" >
+
+    <div class="col-sm-12">
+      <label for="email" class="control-label">E-mail</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="email" id="email" placeholder="Ex.: abc@hotmail.com">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="telefone" class="control-label">Telefone</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="telefone" id="telefone" placeholder="Ex.: 00000-0000">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="curriculo" class="control-label">Currículo</label>
+    </div>
+
+    <div class="col-sm-12">
+      <textarea type="text" class="form-control" formControlName="curriculo" id="curriculo" placeholder="Insira seus dados" rows="5"></textarea>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="cargoAtual" class="control-label">Cargo Atual</label>
+    </div>
+
+    <div class="col-sm-12">
+      <textarea type="text" class="form-control" formControlName="cargoAtual" id="cargoAtual" placeholder="Insira seus dados"></textarea>
+    </div>
+
+  </div>
+
+  <div class="text-right">
+    <button style="margin-left: 1em;" type="submit" class="btn btn-primary" (click)="cadastrar()">Cadastrar</button>
+  </div>
+
+</form>
+

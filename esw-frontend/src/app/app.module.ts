@@ -12,10 +12,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './controle-erro/controle-erro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
+import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CadastroFuncionarioComponent
   ],
   imports: [
     BrowserModule,
