@@ -3,11 +3,13 @@ import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.componen
 import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candidato.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 
 const routes: Routes = [
   { path: "cadastroCandidato", component: CadastroCandidatoComponent } ,
   { path: "pagina-inicial", component: PaginaInicialComponent },
   { path: "cadastrar-vaga", component: CadastrarVagaComponent },
+  { path: "cadastro-funcionario", component: CadastroFuncionarioComponent},
   { path: '', pathMatch: 'full', redirectTo: 'pagina-inicial' }
 ];
 

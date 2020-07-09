@@ -1,3 +1,4 @@
+import { CadastroFuncionarioModule } from './cadastro-funcionario/cadastro-funcionario.module';
 import { CadastrarVagaModule } from './cadastrar-vaga/cadastrar-vaga.module';
 import { CadastrarVagaComponent } from './cadastrar-vaga/cadastrar-vaga.component';
 import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
@@ -16,8 +17,7 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CadastroFuncionarioComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +27,8 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
     CadastroCandidatoModule,
     HttpClientModule,
     PaginaInicialModule,
-    CadastrarVagaModule
+    CadastrarVagaModule,
+    CadastroFuncionarioModule
   ],
   providers: [],
   bootstrap: [AppComponent]
