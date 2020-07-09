@@ -24,11 +24,11 @@
   <div class="form-group" [ngClass]="aplicaCssErro('senha')">
 
     <div class="col-sm-12">
-      <label for="senha" class="control-label">Senha</label>
+      <label for="senha">Senha</label>
     </div>
 
     <div class="col-sm-12">
-      <input type="text" class="form-control" formControlName="senha" id="senha">
+      <input type="password" id="senha" class="form-control" aria-describedby="passwordHelpBlock">
       <!--app-controle-erro [mostrarErro]="verificaValidTouched('senha')" msgErro="Senha é obrigatório.">
       </app-controle-erro-->
     </div>

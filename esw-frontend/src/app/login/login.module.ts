@@ -1,16 +1,16 @@
 import { ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './../controle-erro/controle-erro.component';
-import { PaginaInicialComponent } from './login.component';
+import { LoginComponent } from './login.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    PaginaInicialComponent,
+    LoginComponent,
   ],
   imports: [
     CommonModule,
     ReactiveFormsModule
   ]
 })
-export class PaginaInicialModule { }
+export class LoginModule { }

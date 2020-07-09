@@ -1,3 +1,4 @@
+import { LoginComponent } from './login/login.component';
 import { CadastrarVagaComponent } from './cadastrar-vaga/cadastrar-vaga.component';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candidato.component';
@@ -10,6 +11,7 @@ const routes: Routes = [
   { path: "pagina-inicial", component: PaginaInicialComponent },
   { path: "cadastrar-vaga", component: CadastrarVagaComponent },
   { path: "cadastro-funcionario", component: CadastroFuncionarioComponent},
+  { path: "login", component: LoginComponent},
   { path: '', pathMatch: 'full', redirectTo: 'pagina-inicial' }
 ];
 
