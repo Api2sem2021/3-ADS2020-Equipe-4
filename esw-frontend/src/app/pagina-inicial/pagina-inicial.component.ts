@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Vaga } from './../model/vaga';
 import { VagasService } from './../services/vagas.service';
 import { Login } from './../model/login';
@@ -17,7 +18,8 @@ export class PaginaInicialComponent implements OnInit {
   contador: number;
   constructor(
     private formBuilder: FormBuilder,
-    private vagasService: VagasService
+    private vagasService: VagasService,
+    private route: Router
   ) {
     this.formulario = this.formBuilder.group({
 
@@ -32,13 +34,8 @@ export class PaginaInicialComponent implements OnInit {
     this.buscarVagas();
   }
 
-  logar() {
-    this.login.email = this.formulario.controls.email.value;
-    this.login.senha = this.formulario.controls.senha.value;
-    console.log(this.formulario.value);
-    /*this.candidatoService.cadastrarCandidato(this.candidato).subscribe(async response => {
-      console.log(response);
-    });*/
+  cadastrarNaVaga() {
+    this.route.navigate(["/vaga-detalhada"])
   }
 
   aplicaCssErro(campo: string) {
