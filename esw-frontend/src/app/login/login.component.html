@@ -1,0 +1,47 @@
+<div>
+  <h1>
+    Cadastro de candidato
+  </h1>
+</div>
+<br>
+<form [formGroup]="formulario" class="form-horizontal">
+
+
+  <div class="form-group" [ngClass]="aplicaCssErro('email')">
+
+    <div class="col-sm-12">
+      <label for="email" class="control-label">E-mail</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="email" id="email" placeholder="Ex.: abc@hotmail.com">
+      <!--app-controle-erro [mostrarErro]="verificaValidTouched('email')" msgErro="E-mail é obrigatório.">
+      </app-controle-erro-->
+    </div>
+
+  </div>
+
+  <div class="form-group" [ngClass]="aplicaCssErro('senha')">
+
+    <div class="col-sm-12">
+      <label for="senha" class="control-label">Senha</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="senha" id="senha">
+      <!--app-controle-erro [mostrarErro]="verificaValidTouched('senha')" msgErro="Senha é obrigatório.">
+      </app-controle-erro-->
+    </div>
+
+  </div>
+
+  
+
+  
+  <div class="text-right">
+    <button type="submit" class="btn btn-primary" (click)="logar()">Login</button>
+  </div>
+
+</form>
+
+

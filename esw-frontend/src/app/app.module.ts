@@ -1,3 +1,4 @@
+import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
 import { CadastroCandidatoModule } from './cadastro-candidato/cadastro-candidato.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -8,10 +9,13 @@ import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candid
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './controle-erro/controle-erro.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     CadastroCandidatoModule,
-    HttpClientModule
+    HttpClientModule,
+    PaginaInicialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
