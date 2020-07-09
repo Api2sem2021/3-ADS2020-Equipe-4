@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { CandidatoService } from './../services/candidato.service';
 import { Candidato } from './../model/candidato';
 import { Component, OnInit } from '@angular/core';
@@ -10,11 +11,13 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 })
 export class CadastroCandidatoComponent implements OnInit {
   
+  scrollUp: any;
   formulario: FormGroup;
   candidato: Candidato = new Candidato();
   constructor(
     private formBuilder: FormBuilder,
-    private candidatoService: CandidatoService
+    private candidatoService: CandidatoService,
+    private route: Router
     ) { this.formulario = this.formBuilder.group({
       nome: ['', Validators.required],
       cpf: ['', Validators.required],
@@ -55,6 +58,7 @@ export class CadastroCandidatoComponent implements OnInit {
     this.candidatoService.cadastrarCandidato(this.candidato).subscribe(async response => {
       console.log(response);
     });
+    this.route.navigate(["/pagina-inicial"])
   }
   
 
