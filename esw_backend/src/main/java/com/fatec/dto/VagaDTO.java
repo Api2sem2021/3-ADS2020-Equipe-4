@@ -1,41 +1,35 @@
-package com.fatec.esw.domain;
+package com.fatec.dto;
 
-import java.io.Serializable;
+import com.fatec.esw.domain.Vaga;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+public class VagaDTO {
 
-@Entity
-public class Vaga implements Serializable {
-	
-	private static final long serialVersionUID = 1L;
-	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String descricaoBreve;
 	private String descricaoDetalhada;
 	private String requisitos;
 	private String observacoes;
-	private String data;//Modificar para data
+	private String data;
 	
-	public Vaga() {
-
+	public VagaDTO(Vaga vaga) {
+		
 	}
 
-	public Vaga(Long id, String nome, String descricaoBreve, String descricaoDetalhada, String requisitos,
-			String observações, String data) {
+	public VagaDTO(Long id, String nome, String descricaoBreve, String descricaoDetalhada, String requisitos,
+			String observacoes, String data) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.descricaoBreve = descricaoBreve;
 		this.descricaoDetalhada = descricaoDetalhada;
 		this.requisitos = requisitos;
-		this.observacoes = observações;
+		this.observacoes = observacoes;
 		this.data = data;
+	}
+	
+	public Vaga inserirEntidade(VagaDTO vagaDTO) {
+		return new Vaga(id, nome, descricaoBreve, descricaoDetalhada, requisitos, observacoes, data);
 	}
 
 	public Long getId() {
@@ -93,33 +87,6 @@ public class Vaga implements Serializable {
 	public void setData(String data) {
 		this.data = data;
 	}
-	
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Vaga other = (Vaga) obj;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		return true;
-	}
-	
 	
 	
 }
