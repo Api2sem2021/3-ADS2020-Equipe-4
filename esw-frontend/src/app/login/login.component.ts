@@ -3,11 +3,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pagina-inicial',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class PaginaInicialComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   formulario: FormGroup;
   login: Login = new Login();

@@ -1,3 +1,4 @@
+import { LoginModule } from './login/login.module';
 import { CadastroFuncionarioModule } from './cadastro-funcionario/cadastro-funcionario.module';
 import { CadastrarVagaModule } from './cadastrar-vaga/cadastrar-vaga.module';
 import { CadastrarVagaComponent } from './cadastrar-vaga/cadastrar-vaga.component';
@@ -28,7 +29,8 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
     HttpClientModule,
     PaginaInicialModule,
     CadastrarVagaModule,
-    CadastroFuncionarioModule
+    CadastroFuncionarioModule,
+    LoginModule
   ],
   providers: [],
   bootstrap: [AppComponent]
