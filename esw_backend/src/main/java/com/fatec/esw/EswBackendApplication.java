@@ -41,8 +41,8 @@ public class EswBackendApplication implements CommandLineRunner{
 		Candidato candidato2 = new Candidato(null, "123.456.789-00", "joelma123@hotmail.com","Joelma","988885888","A fazer",status2.getStatus(),"A fazer");
 		candidatoRepository.save(candidato1);
 		candidatoRepository.save(candidato2);
-		Vaga vaga1 = new Vaga(null,"Programador Junior Java","https://www.imagemConceitual.jpg","Programador java","Programador java com experiência no mercado","Java Intermediário","Carga horária de 8hrs p/dia, Salário 3.500,00 Reais","28/07/2020");
-		Vaga vaga2 = new Vaga(null,"Estagiário C#","https://www.imagem.jpg","Estagiário C#","Conhecimento básico em C# ","C# Básico","Carga horária de 6hrs p/dia, Salário 1.050,00 Reais","28/11/2020");
+		Vaga vaga1 = new Vaga(null,"Programador Junior Java","Programador java","Programador java com experiência no mercado","Java Intermediário","Carga horária de 8hrs p/dia, Salário 3.500,00 Reais","28/07/2020");
+		Vaga vaga2 = new Vaga(null,"Estagiário C#","Estagiário C#","Conhecimento básico em C# ","C# Básico","Carga horária de 6hrs p/dia, Salário 1.050,00 Reais","28/11/2020");
 		vagaRepository.save(vaga1);
 		vagaRepository.save(vaga2);
 	}
