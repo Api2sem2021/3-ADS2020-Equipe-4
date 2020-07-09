@@ -8,10 +8,12 @@ import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candid
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './controle-erro/controle-erro.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StatusCandidatoComponent
   ],
   imports: [
     BrowserModule,
