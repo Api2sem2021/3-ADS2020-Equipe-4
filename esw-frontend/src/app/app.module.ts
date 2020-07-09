@@ -1,3 +1,5 @@
+import { CadastrarVagaModule } from './cadastrar-vaga/cadastrar-vaga.module';
+import { CadastrarVagaComponent } from './cadastrar-vaga/cadastrar-vaga.component';
 import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
 import { CadastroCandidatoModule } from './cadastro-candidato/cadastro-candidato.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -10,12 +12,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './controle-erro/controle-erro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
-import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    StatusCandidatoComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +24,8 @@ import { StatusCandidatoComponent } from './status-candidato/status-candidato.co
     ReactiveFormsModule,
     CadastroCandidatoModule,
     HttpClientModule,
-    PaginaInicialModule
+    PaginaInicialModule,
+    CadastrarVagaModule
   ],
   providers: [],
   bootstrap: [AppComponent]

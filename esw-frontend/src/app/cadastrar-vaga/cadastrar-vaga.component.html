@@ -1,0 +1,84 @@
+<div>
+  <h1>
+    Cadastro da Vaga
+  </h1>
+</div>
+<br>
+<form [formGroup]="formulario" class="form-horizontal">
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="nome" class="control-label">Nome da Vaga</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="Nome">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="descricaoBreve" class="control-label">Descrição breve</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="descricaoBreve" id="descricaoBreve">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="descricaoDetalhada" class="control-label">Descrição Detalhada</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="descricaoDetalhada" id="descricaoDetalhada">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="requisitos" class="control-label">Requisitos</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="requisitos" id="requisistos">
+    </div>
+
+  </div>
+  
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="data" class="control-label">Data de Expiração</label>
+    </div>
+
+    <div class="col-sm-12">
+      <textarea type="text" class="form-control" formControlName="data" id="data" placeholder="DD/MM/AAAA"></textarea>
+    </div>
+
+  </div>
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="observacoes" class="control-label">Observações</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="observacoes" id="observacoes">
+    </div>
+
+  </div>
+  
+  <div class="text-right">
+    <button style="margin-left: 1em;" type="submit" class="btn btn-primary" (click)="cadastrarVaga()">Cadastrar</button>
+  </div>
+
+</form>
