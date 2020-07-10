@@ -15,7 +15,7 @@ export class PaginaInicialComponent implements OnInit {
   formulario: FormGroup;
   login: Login = new Login();
   vagas: any[];
-  contador: number;
+  id: number;
   constructor(
     private formBuilder: FormBuilder,
     private vagasService: VagasService,
@@ -30,12 +30,13 @@ export class PaginaInicialComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.contador = 0;
     this.buscarVagas();
   }
 
-  cadastrarNaVaga() {
-    this.route.navigate(["/vaga-detalhada"])
+
+  cadastrarNaVaga(id: number) {
+    console.log(id);
+    this.route.navigate([`/vaga-detalhada/${id}`]);
   }
 
   aplicaCssErro(campo: string) {
@@ -59,9 +60,6 @@ export class PaginaInicialComponent implements OnInit {
     );
   }
 
-  somarContador() {
-    this.contador += this.contador + 1;
-  }
 
 
 }

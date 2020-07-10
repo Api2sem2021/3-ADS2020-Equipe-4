@@ -1,3 +1,4 @@
+import { PaginaInicialRoutingModule } from './pagina-inicial.routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ControleErroComponent } from './../controle-erro/controle-erro.component';
 import { PaginaInicialComponent } from './pagina-inicial.component';
@@ -10,7 +11,8 @@ import { CommonModule } from '@angular/common';
   ],
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    PaginaInicialRoutingModule
   ]
 })
 export class PaginaInicialModule { }

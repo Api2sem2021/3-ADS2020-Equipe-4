@@ -1,3 +1,4 @@
+import { VagaDetalhadaModule } from './vaga-detalhada/vaga-detalhada.module';
 import { AutenticacaoService } from './login/autenticacao.service';
 import { LoginModule } from './login/login.module';
 import { CadastroFuncionarioModule } from './cadastro-funcionario/cadastro-funcionario.module';
@@ -16,10 +17,12 @@ import { ControleErroComponent } from './controle-erro/controle-erro.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VagaDetalhadaComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
     HttpClientModule,
     PaginaInicialModule,
     CadastrarVagaModule,
+    VagaDetalhadaModule,
     CadastroFuncionarioModule,
     LoginModule
   ],
