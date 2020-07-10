@@ -1,3 +1,4 @@
+import { AutenticacaoService } from './autenticacao.service';
 import { Login } from './../model/login';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   login: Login = new Login();
   constructor(
     private formBuilder: FormBuilder,
+    private autenticacaoService: AutenticacaoService
   ) {
     this.formulario = this.formBuilder.group({
 
@@ -29,6 +31,7 @@ export class LoginComponent implements OnInit {
     this.login.email = this.formulario.controls.email.value;
     this.login.senha = this.formulario.controls.senha.value;
     console.log(this.formulario.value);
+    this.autenticacaoService.logar(this.login.email, this.login.senha);
     /*this.candidatoService.cadastrarCandidato(this.candidato).subscribe(async response => {
       console.log(response);
     });*/

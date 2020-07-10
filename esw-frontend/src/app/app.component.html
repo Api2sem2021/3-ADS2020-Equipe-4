@@ -9,13 +9,13 @@
         <a class="nav-link" routerLink="/cadastroCandidato">Cadastro candidato</a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" routerLink="/cadastrar-vaga">Cadastrar Vaga</a>
+        <a class="nav-link" routerLink="/cadastrar-vaga" *ngIf="mostrarItensAdm">Cadastrar Vaga</a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" routerLink="/cadastro-funcionario">Cadastrar Funcionário</a>
+        <a class="nav-link" routerLink="/cadastro-funcionario" *ngIf="mostrarItensAdm">Cadastrar Funcionário</a>
       </li>
       <li routerLinkActive="active">
-        <a class="nav-link" routerLink="/login">Login</a>
+        <a class="nav-link" routerLink="/login" *ngIf="!mostrarItensAdm">Login</a>
       </li>
     </ul>
   </div>

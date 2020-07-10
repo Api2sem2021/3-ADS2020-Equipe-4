@@ -1,3 +1,4 @@
+import { AutenticacaoService } from './login/autenticacao.service';
 import { LoginModule } from './login/login.module';
 import { CadastroFuncionarioModule } from './cadastro-funcionario/cadastro-funcionario.module';
 import { CadastrarVagaModule } from './cadastrar-vaga/cadastrar-vaga.module';
@@ -32,7 +33,9 @@ import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-fu
     CadastroFuncionarioModule,
     LoginModule
   ],
-  providers: [],
+  providers: [
+    AutenticacaoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
