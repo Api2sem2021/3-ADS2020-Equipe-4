@@ -27,6 +27,8 @@ public class CandidatoEditadoDTO {
 	private String cargoAtual;
 	@NotNull
 	private String dataAdmissao;
+	@NotNull
+	private Boolean funcionario;
 		
 	private List<Long> vagas;
 	
@@ -37,7 +39,7 @@ public class CandidatoEditadoDTO {
 
 
 	public CandidatoEditadoDTO(String cpf, String email, String nome, String telefone, String curriculo,
-			String cargoAtual, String dataAdmissao) {
+			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario) {
 		this.cpf = cpf;
 		this.email = email;
 		this.nome = nome;
@@ -45,12 +47,14 @@ public class CandidatoEditadoDTO {
 		this.curriculo = curriculo;
 		this.cargoAtual = cargoAtual;
 		this.dataAdmissao = dataAdmissao;
+		this.marcadores = marcadores;
+		this.funcionario = funcionario;
 	}
 
 
 
 	public Candidato inserirEntidade(CandidatoEditadoDTO candidatoEditadoDTO) {
-		return new Candidato(cpf,email,nome,telefone,curriculo, cargoAtual, dataAdmissao);
+		return new Candidato(cpf,email,nome,telefone,curriculo, cargoAtual, dataAdmissao, marcadores, funcionario);
 	}
 
 	public Long getId() {
@@ -149,6 +153,20 @@ public class CandidatoEditadoDTO {
 	public void setVagas(List<Long> vagas) {
 		this.vagas = vagas;
 	}
+
+
+
+	public Boolean getFuncionario() {
+		return funcionario;
+	}
+
+
+
+	public void setFuncionario(Boolean funcionario) {
+		this.funcionario = funcionario;
+	}
+	
+	
 	
 	
 	

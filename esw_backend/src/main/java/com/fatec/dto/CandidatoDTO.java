@@ -109,6 +109,8 @@ public class CandidatoDTO {
 	public void setMarcadores(String marcadores) {
 		this.marcadores = marcadores;
 	}
+	
+	
 
 
 

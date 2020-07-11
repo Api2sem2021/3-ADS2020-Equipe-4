@@ -3,6 +3,9 @@ package com.fatec.esw.services;
 import java.util.List;
 import java.util.Optional;
 
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +19,9 @@ public class CandidatoService {
 
 	@Autowired //Anotação para instanciar automagicamente
 	private CandidatoRepository candidatoRepository;
+	
+	@Autowired
+	private EntityManager entity;
 	
 	//Objeto Optional é um objeto container que carrega um onjeto do tipo
 	//informado e encapsula a questão do objeto estar encapsulado ou não
@@ -53,6 +59,7 @@ public class CandidatoService {
 		candidato.setCurriculo(candidatoEditadoDTO.getCurriculo() != null ? candidatoEditadoDTO.getCurriculo() : null);
 		candidato.setCargoAtual(candidatoEditadoDTO.getCargoAtual() != null ? candidatoEditadoDTO.getCargoAtual(): null);
 		candidato.setDataAdmissao(candidatoEditadoDTO.getDataAdmissao() != null ? candidatoEditadoDTO.getDataAdmissao(): null);
+		candidato.setFuncionario(candidatoEditadoDTO.getFuncionario());
 		candidatoRepository.save(candidato);
 		return candidato;
 	}
@@ -61,5 +68,5 @@ public class CandidatoService {
 		candidatoRepository.deleteById(id);
 	}
 	
-	
+
 }
