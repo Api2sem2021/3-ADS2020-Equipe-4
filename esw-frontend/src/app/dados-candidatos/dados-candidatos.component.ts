@@ -3,6 +3,7 @@ import { CandidatoService } from '../services/candidato.service';
 import { Candidato } from '../model/candidato';
 import { Identifiers } from '@angular/compiler';
 import { $ } from 'protractor';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dados-candidatos',
@@ -13,11 +14,25 @@ export class DadosCandidatosComponent implements OnInit {
 
   candidato: Candidato = new Candidato();
   id: number;
+  formulario: FormGroup;
   
-
   constructor(
-    private candidatosService: CandidatoService
-    ) { }
+    private candidatosService: CandidatoService,
+    private formBuilder: FormBuilder
+    ) {
+      this.formulario = this.formBuilder.group({
+        id: ['', Validators.required],
+        nome: ['', Validators.required],
+        cpf: ['', Validators.required],
+        email: ['', Validators.required],
+        telefone: ['', Validators.required],
+        curriculo: ['', Validators.required],
+        cargoAtual: [''],
+        dataAdmissao: [''],
+        marcadores: [''],
+        funcionario: ['']
+      });
+    }
 
   ngOnInit() {
    
@@ -35,15 +50,26 @@ export class DadosCandidatosComponent implements OnInit {
      this.candidatosService.detalharCandidato(id).subscribe( res => {
              this.candidato = res;
              console.log(this.candidato);
-             (<HTMLSelectElement>document.getElementById('nome')).value = this.candidato.nome;
-             (<HTMLSelectElement>document.getElementById('cpf')).value = this.candidato.cpf;
-             (<HTMLSelectElement>document.getElementById('email')).value = this.candidato.email;
-             (<HTMLSelectElement>document.getElementById('telefone')).value = this.candidato.telefone;
-             (<HTMLSelectElement>document.getElementById('curriculo')).value = this.candidato.curriculo;
+             this.formulario.controls.id.setValue(this.candidato.id);
+             this.formulario.controls.nome.setValue(this.candidato.nome);
+             this.formulario.controls.cpf.setValue(this.candidato.cpf);
+             this.formulario.controls.email.setValue(this.candidato.email);
+             this.formulario.controls.telefone.setValue(this.candidato.telefone);
+             this.formulario.controls.curriculo.setValue(this.candidato.curriculo);
+             this.formulario.controls.funcionario.setValue(this.candidato.funcionario);
 
-             //ToDo: conferir, se for funcionario traz o cargo, senao fica em branco
-             (<HTMLSelectElement>document.getElementById('cargoAtual')).value = "";
-             (<HTMLSelectElement>document.getElementById('dataAdmissao')).value = "";
+            this.formulario.controls.marcadores.setValue(
+            this.candidato.marcadores == null || this.candidato.marcadores == undefined ?
+            "" : this.candidato.marcadores);
+
+            this.formulario.controls.cargoAtual.setValue(
+            this.candidato.cargoAtual == null || this.candidato.cargoAtual == undefined ?
+            "" : this.candidato.cargoAtual);
+
+            this.formulario.controls.dataAdmissao.setValue(
+            this.candidato.dataAdmissao == null || this.candidato.dataAdmissao == undefined ?
+            "" : this.candidato.dataAdmissao);
+
         }
       );
 
@@ -58,8 +84,28 @@ export class DadosCandidatosComponent implements OnInit {
     (<HTMLSelectElement>document.getElementById('curriculo')).disabled = false;
     (<HTMLSelectElement>document.getElementById('cargoAtual')).disabled = false;
     (<HTMLSelectElement>document.getElementById('dataAdmissao')).disabled = false;
+    (<HTMLSelectElement>document.getElementById('marcadores')).disabled = false;
+    (<HTMLSelectElement>document.getElementById('funcionario')).disabled = false;
     (<HTMLSelectElement>document.getElementById('btn-salvar')).disabled = false;
     (<HTMLSelectElement>document.getElementById('btn-editar')).disabled = true;
+   }
+
+   salvar(){
+     console.log(this.formulario.value);
+      this.candidato.id = this.formulario.controls.id.value;
+      this.candidato.nome = this.formulario.controls.nome.value;
+      this.candidato.cpf = this.formulario.controls.cpf.value;
+      this.candidato.email = this.formulario.controls.email.value;
+      this.candidato.telefone = this.formulario.controls.telefone.value;
+      this.candidato.curriculo = this.formulario.controls.curriculo.value;
+      this.candidato.dataAdmissao = this.formulario.controls.dataAdmissao.value;
+      this.candidato.cargoAtual = this.formulario.controls.cargoAtual.value;
+      this.candidato.marcadores = this.formulario.controls.marcadores.value;
+      this.candidato.funcionario = this.formulario.controls.funcionario.value;
+      console.log(this.candidato);
+      // this.candidatosService.editarCandidato(this.candidato).subscribe(async response => {
+      //     console.log(response);
+      // });
    }
 
 }
