@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CandidatoService } from '../services/candidato.service';
 import { FormGroup } from '@angular/forms';
 import { Login } from '../model/login';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lista-candidatos',
@@ -16,7 +17,8 @@ export class ListaCandidatosComponent implements OnInit {
   id: number;
   
   constructor(
-    private candidatosService: CandidatoService
+    private candidatosService: CandidatoService,
+    private route: Router
   ) {
     
   }
@@ -31,6 +33,11 @@ export class ListaCandidatosComponent implements OnInit {
           console.log(this.candidatos);
       }
     );
+  }
+
+  conferirCandidato(id: number) {
+    console.log(id);
+    this.route.navigate([`/dados-candidatos/${id}`]);
   }
 
 }

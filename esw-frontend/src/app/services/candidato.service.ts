@@ -21,4 +21,8 @@ import { Observable } from 'rxjs';
     public buscarCandidatos(): Observable<any>{
       return this.http.get<Candidato>(`http://localhost:8080/candidatos/buscarTodos`).pipe();
     }
+
+    public detalharCandidato(id: number){
+      return this.http.get<Candidato>(`http://localhost:8080/candidatos/` + id).pipe();
+    }
 }
