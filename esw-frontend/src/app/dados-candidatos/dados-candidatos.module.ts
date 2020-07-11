@@ -9,7 +9,6 @@ import { DadosCandidatosRoutingModule } from './dados-candidatos.routing.module'
   ],
   imports: [
     CommonModule,
-    DadosCandidatosModule,
     DadosCandidatosRoutingModule
   ]
 })
