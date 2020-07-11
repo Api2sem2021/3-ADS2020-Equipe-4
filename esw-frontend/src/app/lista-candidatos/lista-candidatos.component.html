@@ -1,3 +1,26 @@
-<p>
-  lista-candidatos works!
-</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nome do Candidato</th>
+      <th scope="col">CPF</th>
+      <th scope="col">E-mail</th>
+      <th scope="col">Telefone</th>
+      <th scope="col">Habilidades</th>
+      <th scope="col">Status</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of candidatos">
+      <th scope="row">{{item.id}}</th>
+      <td>{{item.nome}}</td>
+      <td>{{item.cpf}}</td>
+      <td>{{item.email}}</td>
+      <td>{{item.telefone}}</td>
+      <td>{{item.habilidades}}</td>
+      <td>{{item.status}}</td>
+      <a (click)="conferirCandidato(item.id)" class="badge badge-success">Detalhar</a>
+    </tr>
+  </tbody>
+</table>

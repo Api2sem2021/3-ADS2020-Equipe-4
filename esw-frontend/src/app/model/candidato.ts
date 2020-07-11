@@ -4,4 +4,6 @@ export class Candidato {
     email?: string;
     telefone?: string;
     curriculo?: string;
+    habilidades?: string;
+    status?: string;
 }
