@@ -1,5 +1,4 @@
 import { Vaga } from './../model/vaga';
-import { Candidato } from './../model/candidato';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,6 +7,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
   })
   export class VagasService {
+    [x: string]: any;
     endPoint: string = `http://localhost:8080/vagas`;
   
     constructor(
