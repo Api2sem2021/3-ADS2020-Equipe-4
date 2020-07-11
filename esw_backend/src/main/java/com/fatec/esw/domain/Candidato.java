@@ -28,12 +28,15 @@ public class Candidato implements Serializable{
 	private String curriculo;
 	private String status; 
 	private String marcadores;
+	private String cargoAtual;
+	private String dataAdmissao;
+	private Boolean funcionario;
 	
 	@ManyToMany(fetch= FetchType.LAZY)
 	@JoinTable(
 	        name = "vaga_candidato",
-	        joinColumns = { @JoinColumn(name = "candidato") },
-	        inverseJoinColumns = { @JoinColumn(name = "vaga") } )
+	        joinColumns = { @JoinColumn(name = "candidato_id") },
+	        inverseJoinColumns = { @JoinColumn(name = "vaga_id") } )
 	private List<Vaga> vagas;
 		
 	public Candidato() {
@@ -60,6 +63,18 @@ public class Candidato implements Serializable{
 		this.nome = nome;
 		this.telefone = telefone;
 		this.curriculo = curriculo;
+	}
+	
+	public Candidato(String cpf, String email, String nome, String telefone, String curriculo, 
+			String cargoAtual, String dataAdmissao) {
+		super();
+		this.cpf = cpf;
+		this.email = email;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.curriculo = curriculo;
+		this.cargoAtual = cargoAtual;
+		this.dataAdmissao = dataAdmissao;
 	}
 
 	
@@ -127,6 +142,38 @@ public class Candidato implements Serializable{
 
 	public void setMarcadores(String marcadores) {
 		this.marcadores = marcadores;
+	}
+	
+    public List<Vaga> getVagas() {
+        return vagas;
+    }
+    
+    public void setVagas(List<Vaga> vagas) {
+        this.vagas = vagas;
+    }
+
+	public String getCargoAtual() {
+		return cargoAtual;
+	}
+
+	public void setCargoAtual(String cargoAtual) {
+		this.cargoAtual = cargoAtual;
+	}
+
+	public String getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+	public void setDataAdmissao(String dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
+	}
+
+	public Boolean getFuncionario() {
+		return funcionario;
+	}
+
+	public void setFuncionario(Boolean funcionario) {
+		this.funcionario = funcionario;
 	}
 
 	@Override
