@@ -1,7 +1,8 @@
-import { PaginaInicialComponent } from './pagina-inicial.component';
-import { VagaDetalhadaComponent } from './../vaga-detalhada/vaga-detalhada.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PaginaInicialComponent } from '../pagina-inicial/pagina-inicial.component';
+import { VagaDetalhadaComponent } from './vaga-detalhada.component';
+
 
 
 const vagasRoutes: Routes = [
@@ -14,4 +15,4 @@ const vagasRoutes: Routes = [
   imports: [RouterModule.forChild(vagasRoutes)],
   exports: [RouterModule]
 })
-export class PaginaInicialRoutingModule { }
+export class VagaDetalhadaRoutingModule { }

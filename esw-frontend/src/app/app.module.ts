@@ -25,8 +25,7 @@ import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.modul
 
 @NgModule({
   declarations: [
-    AppComponent,
-    VagaDetalhadaComponent
+    AppComponent  
   ],
   imports: [
     BrowserModule,
@@ -41,7 +40,8 @@ import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.modul
     CadastroFuncionarioModule,
     LoginModule,
     ListaCandidatosModule,
-    DadosCandidatosModule
+    DadosCandidatosModule,
+    VagaDetalhadaModule
   ],
   providers: [
     AutenticacaoService
