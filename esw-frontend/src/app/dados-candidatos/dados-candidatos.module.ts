@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DadosCandidatosComponent } from './dados-candidatos.component';
 import { DadosCandidatosRoutingModule } from './dados-candidatos.routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { DadosCandidatosRoutingModule } from './dados-candidatos.routing.module'
   ],
   imports: [
     CommonModule,
-    DadosCandidatosRoutingModule
+    DadosCandidatosRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class DadosCandidatosModule { }
