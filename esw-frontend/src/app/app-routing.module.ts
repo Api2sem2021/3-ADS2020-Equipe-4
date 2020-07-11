@@ -6,6 +6,7 @@ import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candid
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
+import { ListaCandidatosComponent } from './lista-candidatos/lista-candidatos.component';
 
 const routes: Routes = [
   { path: "cadastroCandidato", component: CadastroCandidatoComponent } ,
@@ -14,6 +15,8 @@ const routes: Routes = [
   { path: "vaga-detalhada", component: VagaDetalhadaComponent},
   { path: "cadastro-funcionario", component: CadastroFuncionarioComponent},
   { path: "login", component: LoginComponent},
+  { path: "lista-candidatos", component: ListaCandidatosComponent},
+  //{ path: "dados-candidatos", component: },
   { path: '', pathMatch: 'full', redirectTo: 'pagina-inicial' }
 ];
 

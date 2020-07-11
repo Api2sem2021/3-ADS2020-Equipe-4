@@ -1,18 +1,21 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" routerLink="">Vagas de estágio</a>
+      <a class="navbar-brand" routerLink="">Vagas</a>
     </div>
 
     <ul class="nav navbar-nav">
       <li routerLinkActive="active">
-        <a class="nav-link" routerLink="/cadastroCandidato">Cadastro candidato</a>
+        <a class="nav-link" routerLink="/cadastroCandidato">Cadastro Candidato</a>
       </li>
       <li routerLinkActive="active">
         <a class="nav-link" routerLink="/cadastrar-vaga" *ngIf="mostrarItensAdm">Cadastrar Vaga</a>
       </li>
       <li routerLinkActive="active">
         <a class="nav-link" routerLink="/cadastro-funcionario" *ngIf="mostrarItensAdm">Cadastrar Funcionário</a>
+      </li>
+      <li routerLinkActive="active">
+        <a class="nav-link" routerLink="/lista-candidatos" *ngIf="mostrarItensAdm">Candidatos</a>
       </li>
       <li routerLinkActive="active">
         <a class="nav-link" routerLink="/login" *ngIf="!mostrarItensAdm">Login</a>

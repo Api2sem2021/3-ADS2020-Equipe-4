@@ -18,6 +18,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.component';
+import { ListaCandidatosComponent } from './lista-candidatos/lista-candidatos.component';
+import { ListaCandidatosModule } from './lista-candidatos/lista-candidatos.module';
+import { DadosCandidatosComponent } from './dados-candidatos/dados-candidatos.component';
+import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.module';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.componen
     CadastrarVagaModule,
     VagaDetalhadaModule,
     CadastroFuncionarioModule,
-    LoginModule
+    LoginModule,
+    ListaCandidatosModule,
+    DadosCandidatosModule
   ],
   providers: [
     AutenticacaoService
