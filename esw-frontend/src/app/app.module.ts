@@ -18,7 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +36,9 @@ import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.componen
     CadastrarVagaModule,
     VagaDetalhadaModule,
     CadastroFuncionarioModule,
-    LoginModule
+    LoginModule,
+    BrowserAnimationsModule,
+    DragDropModule
   ],
   providers: [
     AutenticacaoService
