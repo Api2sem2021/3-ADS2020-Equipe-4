@@ -70,6 +70,11 @@ public class CandidatoResource {
 		return ResponseEntity.ok().body(listaCandidatos);
 	}
 
+	@GetMapping("/buscarListaCandidatosFiltrados")
+	public ResponseEntity<List<CandidatoFiltradoDTO>> buscarListaCandidatosFiltrados(@RequestParam String nome, @RequestParam String cpf, @RequestParam String marcadores) throws Exception{
+		List<CandidatoFiltradoDTO> listaCandidatos = candidatoService.buscarListaCandidatosFiltrados(nome, cpf, marcadores);
+		return ResponseEntity.ok().body(listaCandidatos);
+	}
 }
 
 	

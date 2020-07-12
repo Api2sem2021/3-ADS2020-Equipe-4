@@ -104,6 +104,45 @@ public class CandidatoService {
 		return lista;
 
 	}
+	
+public List<CandidatoFiltradoDTO> buscarListaCandidatosFiltrados(String nome, String cpf, String marcadores) {
+		
+		CriteriaBuilder builder = entity.getCriteriaBuilder();
+		CriteriaQuery<CandidatoFiltradoDTO> query = builder.createQuery(CandidatoFiltradoDTO.class);
+		Root<Candidato> candidato = query.from(Candidato.class);
+		
+		query.multiselect(candidato.get("cpf"), candidato.get("email"), candidato.get("nome"), candidato.get("telefone"), candidato.get("curriculo"),
+				candidato.get("cargoAtual"), candidato.get("dataAdmissao"), candidato.get("marcadores"), candidato.get("funcionario"), candidato.get("id"),
+				candidato.get("status"));
+		
+		List<javax.persistence.criteria.Predicate> predicateList = new ArrayList<>();
+		
+		
+		if (cpf != null && !cpf.equals("")) {
+			Path<String> cpfCandidato = candidato.get("cpf");
+			predicateList.add(builder.equal(cpfCandidato, cpf));
+		}
+		
+		if (nome != null && !nome.equals("")) {
+			Path<String> nomeCandidato = candidato.get("nome");
+			predicateList.add(builder.like(builder.lower(nomeCandidato), "%" + nome.toLowerCase()+ "%"));
+		}
+		
+		if (marcadores != null && !marcadores.equals("")) {
+			Path<String> marcadoresCandidato = candidato.get("marcadores");
+			predicateList.add(builder.like(builder.lower(marcadoresCandidato), "%" +  marcadores.toLowerCase() + "%"));
+		}
+		
+		javax.persistence.criteria.Predicate[] predicates = new javax.persistence.criteria.Predicate[predicateList.size()];
+		predicateList.toArray(predicates);
+		query.where(predicates);
+		
+		TypedQuery<CandidatoFiltradoDTO> typedQuery = entity.createQuery(query);
+		List<CandidatoFiltradoDTO> lista = typedQuery.getResultList();
+
+		return lista;
+
+	}
 
 
 }

@@ -52,6 +52,21 @@ public class CandidatoFiltradoDTO {
 		this.id = id;
 	}
 	
+	public CandidatoFiltradoDTO(String cpf, String email, String nome, String telefone, String curriculo,
+			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario, Long id, String status) {
+		this.cpf = cpf;
+		this.email = email;
+		this.nome = nome;
+		this.telefone = telefone;
+		this.curriculo = curriculo;
+		this.cargoAtual = cargoAtual;
+		this.dataAdmissao = dataAdmissao;
+		this.marcadores = marcadores;
+		this.funcionario = funcionario;
+		this.id = id;
+	}
+	
+	
 	
 
 

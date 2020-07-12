@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CandidatoService } from '../services/candidato.service';
-import { FormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Login } from '../model/login';
 import { Router } from '@angular/router';
 
@@ -15,12 +15,19 @@ export class ListaCandidatosComponent implements OnInit {
   login: Login = new Login();
   candidatos: any[];
   id: number;
+  nome: string;
+  cpf: string;
+  marcadores: string;
   
   constructor(
     private candidatosService: CandidatoService,
-    private route: Router
-  ) {
-    
+    private route: Router,
+    private formBuilder: FormBuilder
+  ) { this.formulario = this.formBuilder.group({
+    nome: ['', Validators.required],
+    cpf: ['', Validators.required],
+    marcadores: ['', Validators.required],
+    });   
   }
 
   ngOnInit() {
@@ -33,6 +40,19 @@ export class ListaCandidatosComponent implements OnInit {
           console.log(this.candidatos);
       }
     );
+  }
+
+  buscarCandidatosFiltrados() {
+    this.nome = this.formulario.controls.nome.value;
+    this.cpf = this.formulario.controls.cpf.value;
+    this.marcadores = this.formulario.controls.marcadores.value;
+    console.log(this.cpf);
+    this.candidatosService.buscarListaCandidatosFiltrados(this.nome, this.cpf, this.marcadores).subscribe( res => {
+      this.candidatos = res as any[];
+      console.log(this.candidatos);
+  }
+);
+    console.log(this.nome);
   }
 
   conferirCandidato(id: number) {

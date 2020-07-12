@@ -1,3 +1,49 @@
+<form [formGroup]="formulario" class="form-horizontal">
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="nome" class="control-label">Nome</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="nome" id="nome" placeholder="Nome">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="cpf" class="control-label">CPF</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="cpf" id="cpf" placeholder="Ex.: 000.000.000-00">
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="marcadores" class="control-label">Habilidades</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="marcadores" id="marcadores" placeholder="Java">
+    </div>
+
+  </div>
+
+  <div class="text-right">
+    <button style="margin-left: 1em;" type="submit" class="btn btn-primary" (click)="buscarCandidatosFiltrados()">Buscar</button>
+  </div>
+
+</form>
+<br>
+<br>
+
 <table class="table">
   <thead>
     <tr>

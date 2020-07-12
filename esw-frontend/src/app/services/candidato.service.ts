@@ -33,4 +33,8 @@ import { Observable } from 'rxjs';
     public buscarCandidatoFiltrado(cpf: string) {
       return this.http.get<Candidato>(`http://localhost:8080/candidatos/buscarCandidatoFiltrado?cpf=${cpf}`);
     }
+
+    public buscarListaCandidatosFiltrados(nome: string, cpf: string, marcadores: string) {
+      return this.http.get<Candidato>(`http://localhost:8080/candidatos/buscarListaCandidatosFiltrados?nome=${nome}&cpf=${cpf}&marcadores=${marcadores}`);
+    }
 }
