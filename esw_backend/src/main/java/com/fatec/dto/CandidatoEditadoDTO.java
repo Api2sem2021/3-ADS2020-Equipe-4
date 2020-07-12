@@ -3,6 +3,7 @@ package com.fatec.dto;
 import java.util.List;
 
 import com.fatec.esw.domain.Candidato;
+import com.fatec.esw.domain.Vaga;
 import com.sun.istack.NotNull;
 
 public class CandidatoEditadoDTO {
@@ -30,7 +31,7 @@ public class CandidatoEditadoDTO {
 	@NotNull
 	private Boolean funcionario;
 		
-	private List<Long> vagas;
+	private List<Vaga> vagas;
 	
 	public CandidatoEditadoDTO(Candidato candidato) {
 		
@@ -54,7 +55,8 @@ public class CandidatoEditadoDTO {
 
 
 	public Candidato inserirEntidade(CandidatoEditadoDTO candidatoEditadoDTO) {
-		return new Candidato(cpf,email,nome,telefone,curriculo, cargoAtual, dataAdmissao, marcadores, funcionario);
+		return new Candidato(id, cpf, email, nome, telefone, curriculo, status, marcadores, cargoAtual, dataAdmissao, funcionario, vagas);
+		
 	}
 
 	public Long getId() {
@@ -146,11 +148,11 @@ public class CandidatoEditadoDTO {
 
 
 
-	public List<Long> getVagas() {
+	public List<Vaga> getVagas() {
 		return vagas;
 	}
 
-	public void setVagas(List<Long> vagas) {
+	public void setVagas(List<Vaga> vagas) {
 		this.vagas = vagas;
 	}
 

@@ -65,6 +65,9 @@ public class CandidatoService {
 		candidato.setCurriculo(candidatoEditadoDTO.getCurriculo() != null ? candidatoEditadoDTO.getCurriculo() : null);
 		candidato.setCargoAtual(candidatoEditadoDTO.getCargoAtual() != null ? candidatoEditadoDTO.getCargoAtual(): null);
 		candidato.setDataAdmissao(candidatoEditadoDTO.getDataAdmissao() != null ? candidatoEditadoDTO.getDataAdmissao(): null);
+		candidato.setMarcadores(candidatoEditadoDTO.getMarcadores() != null ? candidatoEditadoDTO.getMarcadores(): null);
+		candidato.setVagas(candidatoEditadoDTO.getVagas() != null ? candidatoEditadoDTO.getVagas(): null);
+
 		candidato.setFuncionario(candidatoEditadoDTO.getFuncionario());
 		candidatoRepository.save(candidato);
 		return candidato;
