@@ -1,0 +1,48 @@
+.cdk-drag-preview{
+  box-shadow: black;
+}
+
+.cdk-drag-placeholder{
+  text-decoration-color: brown;
+}
+
+.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder){
+  transition: transform 250ms cubic-bezier(0,0,0.2,1);
+}
+
+.cdk-drag-placeholder, .cdk-drag-preview{
+  opacity: 0.5;
+}
+
+.cdk-drop-list-dragging .cdk-drag{
+  transition: transform 250ms cubic-bezier(0,0,0.2,1);
+}
+h1{
+  margin-bottom: 20 px;
+}
+.wrapper{
+  white-space: nowrap;
+}
+
+.list{
+  vertical-align: top;
+  width: 25%;
+  max-width: 100%;
+  display: inline-block;
+  margin-right: 30px;
+  border: solid 2px #000;
+  border-radius: 15px;
+  padding: 5px 10px;
+  background-size: 500px 2000px;
+  flex: 0 0 auto;
+}
+
+.item{
+  margin: 4px 0;
+  font-size: 16px;
+  border: solid 1px #bbb;
+}
+
+.item-list{
+  margin-left: 3px;
+}

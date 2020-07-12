@@ -1,3 +1,5 @@
+import { StatusCandidatoModule } from './status-candidato/status-candidato.module';
+import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 import { VagaDetalhadaModule } from './vaga-detalhada/vaga-detalhada.module';
 import { AutenticacaoService } from './login/autenticacao.service';
 import { LoginModule } from './login/login.module';
@@ -8,7 +10,8 @@ import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
 import { CadastroCandidatoModule } from './cadastro-candidato/cadastro-candidato.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candidato.component';
@@ -25,9 +28,12 @@ import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.modul
 
 @NgModule({
   declarations: [
-    AppComponent  
+    AppComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    DragDropModule,
+    StatusCandidatoModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

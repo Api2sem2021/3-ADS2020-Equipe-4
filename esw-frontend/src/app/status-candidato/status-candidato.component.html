@@ -1,3 +1,81 @@
-<p>
-  status-candidato works!
-</p>
+<h1>Status dos candidatos</h1>
+<div cdkDropListGroup>
+<div class= wrapper>
+  <div class=list>
+    <h2>Incritos</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="subscribed" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of subscribed" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class=list>
+    <h2>Selecionados</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="selected" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of selected" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class=list>
+    <h2>Entrevista</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="interviewed" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of interviewed" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class=list>
+    <h2>Prova</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="test" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of test" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class=list>
+    <h2>Aprovados</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="approved" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of approved" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class=list>
+    <h2>Reprovados</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="failed" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of failed" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+  
+  <div class=list>
+    <h2>Contratados</h2>
+    <div 
+      cdkDropList #initiatedList="cdkDropList"
+      [cdkDropListData]="employed" 
+      class="item-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="item" *ngFor="let item of employed" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</div>  
+</div>
