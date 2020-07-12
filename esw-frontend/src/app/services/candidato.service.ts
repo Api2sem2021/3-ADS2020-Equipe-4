@@ -1,3 +1,4 @@
+import { CandidatoVaga } from './../model/candidato-vaga';
 import { Candidato } from './../model/candidato';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -37,4 +38,8 @@ import { Observable } from 'rxjs';
     public buscarListaCandidatosFiltrados(nome: string, cpf: string, marcadores: string) {
       return this.http.get<Candidato>(`http://localhost:8080/candidatos/buscarListaCandidatosFiltrados?nome=${nome}&cpf=${cpf}&marcadores=${marcadores}`);
     }
+
+    //public cadastrarNaVaga(candidato: CandidatoVaga) {
+    //  return this.http.put(`http://localhost:8080/candidatos/cadastrarNaVaga`, candidato);
+    //}
 }
