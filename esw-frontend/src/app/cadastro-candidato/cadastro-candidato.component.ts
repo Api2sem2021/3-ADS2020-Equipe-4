@@ -10,7 +10,6 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./cadastro-candidato.component.css']
 })
 export class CadastroCandidatoComponent implements OnInit {
-  
   scrollUp: any;
   formulario: FormGroup;
   candidato: Candidato = new Candidato();
@@ -26,15 +25,14 @@ export class CadastroCandidatoComponent implements OnInit {
       curriculo: ['', Validators.required]
     });
   }
-  
   ngOnInit() {
   }
-  
+
   aplicaCssErro(campo: string) {
     return {
       'has-error': this.verificaValidTouched(campo),
       'has-feedback': this.verificaValidTouched(campo)
-    }
+    };
   }
   
   verificaValidTouched(campo: string) {
@@ -58,7 +56,7 @@ export class CadastroCandidatoComponent implements OnInit {
     this.candidatoService.cadastrarCandidato(this.candidato).subscribe(async response => {
       console.log(response);
     });
-    this.route.navigate(["/pagina-inicial"])
+    this.route.navigate(["/pagina-inicial"]);
   }
   
 

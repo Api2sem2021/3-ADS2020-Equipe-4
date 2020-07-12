@@ -1,8 +1,9 @@
+import { VagaDetalhadaComponent } from './vaga-detalhada.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [],
+  declarations: [VagaDetalhadaComponent],
   imports: [
     CommonModule
   ]

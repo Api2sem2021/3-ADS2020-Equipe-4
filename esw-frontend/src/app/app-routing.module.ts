@@ -1,3 +1,4 @@
+import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.component';
 import { LoginComponent } from './login/login.component';
 import { CadastrarVagaComponent } from './cadastrar-vaga/cadastrar-vaga.component';
@@ -8,6 +9,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 
 const routes: Routes = [
+  { path: "status-candidato", component: StatusCandidatoComponent } ,
   { path: "cadastroCandidato", component: CadastroCandidatoComponent } ,
   { path: "pagina-inicial", component: PaginaInicialComponent },
   { path: "cadastrar-vaga", component: CadastrarVagaComponent },

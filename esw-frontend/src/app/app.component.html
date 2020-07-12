@@ -15,6 +15,9 @@
         <a class="nav-link" routerLink="/cadastro-funcionario" *ngIf="mostrarItensAdm">Cadastrar Funcionário</a>
       </li>
       <li routerLinkActive="active">
+        <a class="nav-link" routerLink="/status-candidato" *ngIf="mostrarItensAdm">Status dos Candidatos</a>
+      </li>
+      <li routerLinkActive="active">
         <a class="nav-link" routerLink="/login" *ngIf="!mostrarItensAdm">Login</a>
       </li>
     </ul>
