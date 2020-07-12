@@ -1,16 +1,22 @@
 package com.fatec.esw.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Path;
+import javax.persistence.criteria.Root;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fatec.dto.CandidatoDTO;
 import com.fatec.dto.CandidatoEditadoDTO;
+import com.fatec.dto.CandidatoFiltradoDTO;
 import com.fatec.esw.domain.Candidato;
 import com.fatec.esw.repositories.CandidatoRepository;
 
@@ -68,5 +74,33 @@ public class CandidatoService {
 		candidatoRepository.deleteById(id);
 	}
 	
+	public List<CandidatoFiltradoDTO> buscarCandidatoFiltrado(String cpf) {
+		
+		CriteriaBuilder builder = entity.getCriteriaBuilder();
+		CriteriaQuery<CandidatoFiltradoDTO> query = builder.createQuery(CandidatoFiltradoDTO.class);
+		Root<Candidato> candidato = query.from(Candidato.class);
+		
+		query.multiselect(candidato.get("cpf"), candidato.get("email"), candidato.get("nome"), candidato.get("telefone"), candidato.get("curriculo"),
+				candidato.get("cargoAtual"), candidato.get("dataAdmissao"), candidato.get("marcadores"), candidato.get("funcionario"), candidato.get("id"));
+		
+		List<javax.persistence.criteria.Predicate> predicateList = new ArrayList<>();
+		
+		
+		if (cpf != null && !cpf.equals("")) {
+			Path<String> cpfCandidato = candidato.get("cpf");
+			predicateList.add(builder.equal(cpfCandidato, cpf));
+		}
+		
+		javax.persistence.criteria.Predicate[] predicates = new javax.persistence.criteria.Predicate[predicateList.size()];
+		predicateList.toArray(predicates);
+		query.where(predicates);
+		
+		TypedQuery<CandidatoFiltradoDTO> typedQuery = entity.createQuery(query);
+		List<CandidatoFiltradoDTO> lista = typedQuery.getResultList();
+
+		return lista;
+
+	}
+
 
 }

@@ -4,88 +4,116 @@
   </h1>
 </div>
 <br>
-<form class="form-horizontal">
-
-  <div class="form-group">
-
+<form class="form-horizontal" [formGroup]="formulario">
+  
+  <div>
+    
     <div class="col-sm-12">
       <label for="nome" class="control-label">Nome</label>
     </div>
-
+    
     <div class="col-sm-12">
-      <input type="text" class="form-control" formControlName="nome" id="nome" disabled>
+      <input type="text" class="form-control" id="nome" disabled>
     </div>
-
+    
   </div>
-
-  <div class="form-group">
-
+  
+  <div>
+    
     <div class="col-sm-12">
       <label for="descricaoDetalhada" class="control-label">Descrição</label>
     </div>
-
+    
     <div class="col-sm-12">
-      <textarea type="text" class="form-control" formControlName="descricaoDetalhada" id="descricaoDetalhada" rows="5" disabled></textarea>
+      <textarea type="text" class="form-control" id="descricaoDetalhada" rows="5" disabled></textarea>
     </div>
-
+    
   </div>
-
-  <div class="form-group" >
-
+  
+  <div >
+    
     <div class="col-sm-12">
       <label for="requisitos" class="control-label">Requisitos</label>
     </div>
-
+    
     <div class="col-sm-12">
-      <textarea type="text" class="form-control" formControlName="requisitos" id="requisitos" rows="5" disabled></textarea>
+      <textarea type="text" class="form-control" id="requisitos" rows="5" disabled></textarea>
     </div>
-
+    
   </div>
-
-  <div class="form-group">
-
+  
+  <div>
+    
     <div class="col-sm-12">
       <label for="observacoes" class="control-label">Observacoes</label>
     </div>
-
+    
     <div class="col-sm-12">
-      <textarea type="text" class="form-control" formControlName="observacoes" id="observacoes" rows="5" disabled></textarea>
+      <textarea type="text" class="form-control" id="observacoes" rows="5" disabled></textarea>
     </div>
-
+    
   </div>
-
-  <div class="form-group">
-
+  
+  <div>
+    
     <div class="col-sm-12">
       <label for="data" class="control-label">Data de Aspiração</label>
     </div>
-
+    
     <div class="col-sm-12">
-      <textarea type="text" class="form-control" formControlName="data" id="data" disabled></textarea>
+      <textarea type="text" class="form-control" id="data" disabled></textarea>
     </div>
-
+    
   </div>
-
-
-
+  
+  
+  
   <table style="width: 100%;">
     <tr>
       <td>
         <div class="text-right">
-          <button style="margin-left: 1.2em;" type="submit" class="btn btn-primary" (click)="cadastrarNaVaga()" id="btn-cadastrarNaVaga">Cadastrar</button>
-        </div>
-
+          <button style="margin-right: 1em; margin-top: 1em;" type="button" class="btn btn-primary" (click)="cadastrarNaVaga()" id="btn-salvar">Salvar</button>
+        </div>    
       </td>
     </tr>
   </table>
-
+  
   <br><br>
+  
+  <div>
+    <h1>
+      Cadastrar na vaga
+    </h1><br>
+      <h4 style="margin-top: 1.1em;">
+        Após se cadastrar, entre com seu cpf cara se cadastrar em uma vaga de seu desejo
+      </h4>
+    </div>
+    <br>
+    <div>
+      
+      <div class="col-sm-12">
+        <label for="cpf" class="control-label">CPF</label>
+      </div>
+      
+      <div class="col-sm-12">
+        <input type="text" class="form-control" formControlName="cpf" id="cpf" placeholder="Ex.: 000.000.000-00">
+      </div><p>
 
-
-
-
-</form>
-
-
-
-
+      <div class="text-right">
+        <button style="margin-right: 1em; margin-top: 1em;" type="submit" class="btn btn-primary" (click)="buscaFiltrada()">Buscar</button>
+      </div>
+      
+    </div>
+    
+    
+  </form>
+  <br>
+  <br>
+  <br>
+  
+  
+  
+  
+  
+  
+  

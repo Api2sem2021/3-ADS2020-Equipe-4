@@ -5,7 +5,7 @@ import java.util.List;
 import com.fatec.esw.domain.Candidato;
 import com.sun.istack.NotNull;
 
-public class CandidatoDTO {
+public class CandidatoFiltradoDTO {
 
 	private Long id;
 	
@@ -23,26 +23,47 @@ public class CandidatoDTO {
 	private String status; 
 	@NotNull
 	private String marcadores;
-	
+	@NotNull
+	private String cargoAtual;
+	@NotNull
+	private String dataAdmissao;
+	@NotNull
+	private Boolean funcionario;
+		
 	private List<Long> vagas;
 	
-	public CandidatoDTO(Candidato candidato) {
+	public CandidatoFiltradoDTO(Candidato candidato) {
 		
 	}
 	
 
 
-	public CandidatoDTO(String cpf, String email, String nome, String telefone, String curriculo) {
+	public CandidatoFiltradoDTO(String cpf, String email, String nome, String telefone, String curriculo,
+			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario, Long id) {
 		this.cpf = cpf;
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.curriculo = curriculo;
+		this.cargoAtual = cargoAtual;
+		this.dataAdmissao = dataAdmissao;
+		this.marcadores = marcadores;
+		this.funcionario = funcionario;
+		this.id = id;
 	}
-
+	
 	
 
-	public Candidato inserirEntidade(CandidatoDTO candidatoDTO) {
+
+
+	public CandidatoFiltradoDTO(String cpf) {
+
+		this.cpf = cpf;
+	}
+
+
+
+	public Candidato inserirEntidade(CandidatoFiltradoDTO candidatoDTO) {
 		return new Candidato(cpf,email,nome,telefone,curriculo);
 	}
 

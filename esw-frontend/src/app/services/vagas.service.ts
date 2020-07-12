@@ -16,10 +16,13 @@ import { Observable } from 'rxjs';
   
     public cadastrarVaga(vaga: Vaga) {
       return this.http.post(`http://localhost:8080/vagas`, vaga);
-      //tratar erro quando possível
     }
 
     public buscarVagas(): Observable<any> {
         return this.http.get<Vaga>(`http://localhost:8080/vagas/buscarTodas`).pipe();
       }
+
+    public buscarVagaPorId(id: number) {
+      return this.http.get(`http://localhost:8080/vagas/${id}`);
+    }
 }

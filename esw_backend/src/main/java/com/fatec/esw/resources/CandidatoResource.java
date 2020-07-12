@@ -13,11 +13,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.fatec.dto.CandidatoDTO;
 import com.fatec.dto.CandidatoEditadoDTO;
+import com.fatec.dto.CandidatoFiltradoDTO;
 import com.fatec.esw.domain.Candidato;
 import com.fatec.esw.services.CandidatoService;
 
@@ -61,6 +63,13 @@ public class CandidatoResource {
 		candidatoService.delete(id);
 		return ResponseEntity.noContent().build();
 	}
+	
+	@GetMapping("/buscarCandidatoFiltrado")
+	public ResponseEntity<List<CandidatoFiltradoDTO>> buscarCandidatoFiltrado(@RequestParam String cpf) throws Exception{
+		List<CandidatoFiltradoDTO> listaCandidatos = candidatoService.buscarCandidatoFiltrado(cpf);
+		return ResponseEntity.ok().body(listaCandidatos);
+	}
+
 }
 
 	

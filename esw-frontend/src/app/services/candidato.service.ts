@@ -29,4 +29,8 @@ import { Observable } from 'rxjs';
     public editarCandidato(candidato: Candidato){
       return this.http.put(`http://localhost:8080/candidatos/editar`, candidato);
     }
+
+    public buscarCandidatoFiltrado(cpf: string) {
+      return this.http.get<Candidato>(`http://localhost:8080/candidatos/buscarCandidatoFiltrado?cpf=${cpf}`);
+    }
 }
