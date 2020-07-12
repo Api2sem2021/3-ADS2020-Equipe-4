@@ -1,11 +1,17 @@
-import { VagaDetalhadaComponent } from './vaga-detalhada.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { VagaDetalhadaRoutingModule } from './vaga-detalhada.routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { VagaDetalhadaComponent } from './vaga-detalhada.component';
 
 @NgModule({
-  declarations: [VagaDetalhadaComponent],
+  declarations: [
+    VagaDetalhadaComponent
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    VagaDetalhadaRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class VagaDetalhadaModule { }

@@ -5,7 +5,7 @@ import java.util.List;
 import com.fatec.esw.domain.Candidato;
 import com.sun.istack.NotNull;
 
-public class CandidatoDTO {
+public class CandidatoEditadoDTO {
 
 	private Long id;
 	
@@ -23,27 +23,38 @@ public class CandidatoDTO {
 	private String status; 
 	@NotNull
 	private String marcadores;
-	
+	@NotNull
+	private String cargoAtual;
+	@NotNull
+	private String dataAdmissao;
+	@NotNull
+	private Boolean funcionario;
+		
 	private List<Long> vagas;
 	
-	public CandidatoDTO(Candidato candidato) {
+	public CandidatoEditadoDTO(Candidato candidato) {
 		
 	}
 	
 
 
-	public CandidatoDTO(String cpf, String email, String nome, String telefone, String curriculo) {
+	public CandidatoEditadoDTO(String cpf, String email, String nome, String telefone, String curriculo,
+			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario) {
 		this.cpf = cpf;
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.curriculo = curriculo;
+		this.cargoAtual = cargoAtual;
+		this.dataAdmissao = dataAdmissao;
+		this.marcadores = marcadores;
+		this.funcionario = funcionario;
 	}
 
-	
 
-	public Candidato inserirEntidade(CandidatoDTO candidatoDTO) {
-		return new Candidato(cpf,email,nome,telefone,curriculo);
+
+	public Candidato inserirEntidade(CandidatoEditadoDTO candidatoEditadoDTO) {
+		return new Candidato(cpf,email,nome,telefone,curriculo, cargoAtual, dataAdmissao, marcadores, funcionario);
 	}
 
 	public Long getId() {
@@ -109,8 +120,29 @@ public class CandidatoDTO {
 	public void setMarcadores(String marcadores) {
 		this.marcadores = marcadores;
 	}
+
 	
-	
+	public String getCargoAtual() {
+		return cargoAtual;
+	}
+
+
+
+	public void setCargoAtual(String cargoAtual) {
+		this.cargoAtual = cargoAtual;
+	}
+
+
+
+	public String getDataAdmissao() {
+		return dataAdmissao;
+	}
+
+
+
+	public void setDataAdmissao(String dataAdmissao) {
+		this.dataAdmissao = dataAdmissao;
+	}
 
 
 
@@ -118,11 +150,26 @@ public class CandidatoDTO {
 		return vagas;
 	}
 
-
-
 	public void setVagas(List<Long> vagas) {
 		this.vagas = vagas;
 	}
+
+
+
+	public Boolean getFuncionario() {
+		return funcionario;
+	}
+
+
+
+	public void setFuncionario(Boolean funcionario) {
+		this.funcionario = funcionario;
+	}
+	
+	
+	
+	
+	
 	
 	
 }

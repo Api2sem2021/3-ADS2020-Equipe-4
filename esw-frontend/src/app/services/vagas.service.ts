@@ -1,5 +1,4 @@
 import { Vaga } from './../model/vaga';
-import { Candidato } from './../model/candidato';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -8,6 +7,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
   })
   export class VagasService {
+    [x: string]: any;
     endPoint: string = `http://localhost:8080/vagas`;
   
     constructor(
@@ -16,10 +16,13 @@ import { Observable } from 'rxjs';
   
     public cadastrarVaga(vaga: Vaga) {
       return this.http.post(`http://localhost:8080/vagas`, vaga);
-      //tratar erro quando possível
     }
 
     public buscarVagas(): Observable<any> {
         return this.http.get<Vaga>(`http://localhost:8080/vagas/buscarTodas`).pipe();
       }
+
+    public buscarVagaPorId(id: number) {
+      return this.http.get(`http://localhost:8080/vagas/${id}`);
+    }
 }

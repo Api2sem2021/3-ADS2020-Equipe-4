@@ -10,7 +10,8 @@ import { PaginaInicialModule } from './pagina-inicial/pagina-inicial.module';
 import { CadastroCandidatoModule } from './cadastro-candidato/cadastro-candidato.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CadastroCandidatoComponent } from './cadastro-candidato/cadastro-candidato.component';
@@ -20,14 +21,19 @@ import { HttpClientModule } from '@angular/common/http';
 import { PaginaInicialComponent } from './pagina-inicial/pagina-inicial.component';
 import { CadastroFuncionarioComponent } from './cadastro-funcionario/cadastro-funcionario.component';
 import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+import { ListaCandidatosComponent } from './lista-candidatos/lista-candidatos.component';
+import { ListaCandidatosModule } from './lista-candidatos/lista-candidatos.module';
+import { DadosCandidatosComponent } from './dados-candidatos/dados-candidatos.component';
+import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.module';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    DragDropModule,
+    StatusCandidatoModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -39,9 +45,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     VagaDetalhadaModule,
     CadastroFuncionarioModule,
     LoginModule,
-    BrowserAnimationsModule,
-    DragDropModule,
-    StatusCandidatoModule
+    ListaCandidatosModule,
+    DadosCandidatosModule,
+    VagaDetalhadaModule
   ],
   providers: [
     AutenticacaoService

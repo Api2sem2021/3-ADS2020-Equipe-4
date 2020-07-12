@@ -1,0 +1,139 @@
+<div>
+  <h1>
+    Detalhar Candidato
+  </h1>
+</div>
+<br>
+<form [formGroup]="formulario" class="form-horizontal">
+
+  <div class="form-group">
+
+
+    <input type="text" class="form-control" formControlName="id" id="id" disabled *ngIf="mostrarItensAdm">
+
+    <div class="col-sm-12">
+      <label for="nome" class="control-label">Nome</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="nome" id="nome" disabled>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="cpf" class="control-label">CPF</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="cpf" id="cpf" disabled>
+    </div>
+
+  </div>
+
+  <div class="form-group" >
+
+    <div class="col-sm-12">
+      <label for="email" class="control-label">E-mail</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="email" id="email" disabled>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="telefone" class="control-label">Telefone</label>
+    </div>
+
+    <div class="col-sm-12">
+      <input type="text" class="form-control" formControlName="telefone" id="telefone" disabled>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="curriculo" class="control-label">Currículo</label>
+    </div>
+
+    <div class="col-sm-12">
+      <textarea type="text" class="form-control" formControlName="curriculo" id="curriculo"rows="5" disabled></textarea>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="marcadores" class="control-label">Currículo</label>
+    </div>
+
+    <div class="col-sm-12">
+      <textarea type="text" class="form-control" formControlName="marcadores" id="marcadores"rows="5" disabled></textarea>
+    </div>
+
+  </div>
+
+  <div class="form-group">
+
+    <div class="col-sm-12">
+      <label for="cargoAtual" class="control-label">Cargo Atual</label>
+    </div>
+
+    <div class="col-sm-12">
+      <textarea type="text" class="form-control" formControlName="cargoAtual" id="cargoAtual" disabled></textarea>
+    </div>
+
+  </div>
+
+
+  <div class="form-group">
+
+    <div class="col-sm-10">
+      <label for="dataAdmissao" class="control-label">Data de Admissão</label>
+    </div>
+    <div class="col-sm-2">
+      <label for="funcionario" class="control-label">Funcionário</label>
+    </div>
+
+    <div class="col-sm-10">
+      <textarea type="text" class="form-control" formControlName="dataAdmissao" id="dataAdmissao" disabled></textarea>
+    </div>
+
+    
+    <div class="col-sm-2">
+      <input type="checkbox" formControlName="funcionario" id="funcionario" style="margin-top: 10px; margin-left: 20%; transform: scale(1.5);" disabled>
+    </div>
+
+
+  </div>
+
+  <table style="width: 100%;">
+    <tr>
+      <td>
+        <div class="text-right" style="width: 190%;">
+          <button style="margin-left: 1em;" type="button" class="btn btn-primary" (click)="editar()" id="btn-editar">Editar</button>
+        </div>
+      </td>
+      <td>
+        <div class="text-right">
+          <button style="margin-left: 1.2em;" type="button" class="btn btn-primary" (click)="salvar()" id="btn-salvar" disabled>Salvar</button>
+        </div>
+      
+      </td>
+    </tr>
+  </table>
+
+  <br><br>
+  
+
+  
+
+</form>

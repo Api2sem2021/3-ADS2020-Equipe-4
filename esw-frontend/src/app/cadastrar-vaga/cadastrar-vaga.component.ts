@@ -14,7 +14,7 @@ export class CadastrarVagaComponent implements OnInit {
   vaga: Vaga = new Vaga();
   constructor(
     private vagaService: VagasService,
-    private formBuilder: FormBuilder,
+    private formBuilder: FormBuilder
   ) { this.formulario = this.formBuilder.group({
     nome: ['', Validators.required],
     descricaoBreve: ['', Validators.required],
@@ -39,6 +39,7 @@ export class CadastrarVagaComponent implements OnInit {
     this.vagaService.cadastrarVaga(this.vaga).subscribe(async response => {
       console.log(response);
     });
+    
   }
 
 }
