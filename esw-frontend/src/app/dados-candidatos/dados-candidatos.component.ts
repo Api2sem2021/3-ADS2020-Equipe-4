@@ -104,7 +104,7 @@ export class DadosCandidatosComponent implements OnInit {
       this.candidato.funcionario = this.formulario.controls.funcionario.value;
       console.log(this.candidato);
       // this.candidatosService.editarCandidato(this.candidato).subscribe(async response => {
-      //     console.log(response);
+      //      console.log(response);
       // });
    }
 

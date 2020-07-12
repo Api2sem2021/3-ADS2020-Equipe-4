@@ -72,11 +72,11 @@
   <div class="form-group">
 
     <div class="col-sm-12">
-      <label for="marcadores" class="control-label">Currículo</label>
+      <label for="marcadores" class="control-label">Marcadores</label>
     </div>
 
     <div class="col-sm-12">
-      <textarea type="text" class="form-control" formControlName="marcadores" id="marcadores"rows="5" disabled></textarea>
+      <input type="text" class="form-control" formControlName="marcadores" id="marcadores" disabled>
     </div>
 
   </div>
@@ -124,7 +124,7 @@
       </td>
       <td>
         <div class="text-right">
-          <button style="margin-left: 1.2em;" type="button" class="btn btn-primary" (click)="salvar()" id="btn-salvar" disabled>Salvar</button>
+          <button style="margin-left: 1.2em;" type="submit" class="btn btn-primary" (click)="salvar()" id="btn-salvar" disabled>Salvar</button>
         </div>
       
       </td>
