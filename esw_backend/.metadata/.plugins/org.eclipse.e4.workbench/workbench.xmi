@@ -11,6 +11,7 @@
     <persistedState key="aggregateWorkingSetId" value="Aggregate for window 1593536444165"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time/>"/>
     <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_OQAfMLrzEeqFRMRamh-XXQ" selectedElement="_OQAfMbrzEeqFRMRamh-XXQ" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_OQAfMbrzEeqFRMRamh-XXQ" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_OmXJsLrzEeqFRMRamh-XXQ">
         <children xsi:type="advanced:Perspective" xmi:id="_OmXJsLrzEeqFRMRamh-XXQ" elementId="org.eclipse.jdt.ui.JavaPerspective" selectedElement="_OmXJsbrzEeqFRMRamh-XXQ" label="Java" iconURI="platform:/plugin/org.eclipse.jdt.ui/$nl$/icons/full/eview16/jperspective.png">
@@ -111,7 +112,7 @@
                 </children>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_OmXJvbrzEeqFRMRamh-XXQ" containerData="7500">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_OmXJvbrzEeqFRMRamh-XXQ" containerData="7500" selectedElement="_OmXJxbrzEeqFRMRamh-XXQ">
               <children xsi:type="basic:PartSashContainer" xmi:id="_OmXJvrrzEeqFRMRamh-XXQ" containerData="7500" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_OmXJv7rzEeqFRMRamh-XXQ" elementId="org.eclipse.ui.editorss" containerData="7500" ref="_Ol7r4LrzEeqFRMRamh-XXQ"/>
                 <children xsi:type="basic:PartStack" xmi:id="_OmXJwLrzEeqFRMRamh-XXQ" elementId="right" containerData="2500" selectedElement="_OmXJwbrzEeqFRMRamh-XXQ">
@@ -363,7 +364,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ObZP0LrzEeqFRMRamh-XXQ" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ObdhQLrzEeqFRMRamh-XXQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_N2734LrzEeqFRMRamh-XXQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_jwrYgMRNEequ45RSii7O2w" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_N2734LrzEeqFRMRamh-XXQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ObZP0brzEeqFRMRamh-XXQ" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -376,10 +377,10 @@
         <tags>toolbarSeparator</tags>
         <children xsi:type="menu:ToolBarSeparator" xmi:id="_ObZP1brzEeqFRMRamh-XXQ" elementId="additions" toBeRendered="false"/>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_OnH-sLrzEeqFRMRamh-XXQ" elementId="com.objectaid.uml.addon.cls.alignment">
+      <children xsi:type="menu:ToolBar" xmi:id="_OnH-sLrzEeqFRMRamh-XXQ" elementId="com.objectaid.uml.addon.cls.alignment" visible="false">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_OpSh4LrzEeqFRMRamh-XXQ" elementId="com.objectaid.uml.addon.cls.display">
+      <children xsi:type="menu:ToolBar" xmi:id="_OpSh4LrzEeqFRMRamh-XXQ" elementId="com.objectaid.uml.addon.cls.display" visible="false">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_OrEqkLrzEeqFRMRamh-XXQ" elementId="org.eclipse.debug.ui.launchActionSet">
@@ -397,7 +398,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ObZ24LrzEeqFRMRamh-XXQ" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_ObeIU7rzEeqFRMRamh-XXQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_N26DJ7rzEeqFRMRamh-XXQ"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_jww4EMRNEequ45RSii7O2w" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_N26DJ7rzEeqFRMRamh-XXQ"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_ObZ24brzEeqFRMRamh-XXQ" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -1496,12 +1497,6 @@
     <persistedState key="originalCompatibilityViewBundle" value="org.springframework.ide.eclipse.boot.dash"/>
     <tags>View</tags>
     <tags>categoryTag:Other</tags>
-  </descriptors>
-  <descriptors xmi:id="_OP7msLrzEeqFRMRamh-XXQ" elementId="diagramTable" label="Diagrams" iconURI="platform:/plugin/com.objectaid.uml.addon/icons/class-diagram.gif" tooltip="" category="ObjectAid" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
-    <persistedState key="originalCompatibilityViewClass" value="com.objectaid.uml.addon.diagrams.DiagramTableView"/>
-    <persistedState key="originalCompatibilityViewBundle" value="com.objectaid.uml.addon"/>
-    <tags>View</tags>
-    <tags>categoryTag:ObjectAid</tags>
   </descriptors>
   <trimContributions xmi:id="_2r10UF9tEeO-yojH_y4TJA" elementId="org.eclipse.ui.ide.application.trimcontribution.QuickAccess" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" toBeRendered="false" parentId="org.eclipse.ui.main.toolbar" positionInParent="last">
     <children xsi:type="menu:ToolControl" xmi:id="_76uUAF9tEeO-yojH_y4TJA" elementId="Spacer Glue" contributorURI="platform:/plugin/org.eclipse.ui.ide.application" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
