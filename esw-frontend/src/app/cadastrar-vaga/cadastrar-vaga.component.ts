@@ -38,6 +38,8 @@ export class CadastrarVagaComponent implements OnInit {
     console.log(this.vaga);
     this.vagaService.cadastrarVaga(this.vaga).subscribe(async response => {
       console.log(response);
+      alert(response == null ? "Vaga cadastrada com sucesso!" : "Não foi possível cadastrar a vaga.");
+          window.location.href = "../pagina-inicial";
     });
     
   }

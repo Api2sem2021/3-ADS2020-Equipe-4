@@ -103,9 +103,11 @@ export class DadosCandidatosComponent implements OnInit {
       this.candidato.marcadores = this.formulario.controls.marcadores.value;
       this.candidato.funcionario = this.formulario.controls.funcionario.value;
       console.log(this.candidato);
-      // this.candidatosService.editarCandidato(this.candidato).subscribe(async response => {
-      //      console.log(response);
-      // });
+      this.candidatosService.editarCandidato(this.candidato).subscribe(async response => {
+          console.log(response);
+          alert(response == null ? "Candidato editado com sucesso!" : "Não foi possível salvar a edição do candidato.");
+          window.location.href = "../pagina-inicial";
+      });
    }
 
 }

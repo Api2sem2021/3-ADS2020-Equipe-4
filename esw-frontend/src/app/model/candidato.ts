@@ -9,4 +9,5 @@ export class Candidato {
     marcadores?: string;
     cargoAtual?: string;
     funcionario?: boolean;
+    //status?: number;
 }

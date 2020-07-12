@@ -51,12 +51,14 @@ export class CadastroCandidatoComponent implements OnInit {
     this.candidato.email = this.formulario.controls.email.value;
     this.candidato.telefone = this.formulario.controls.telefone.value;
     this.candidato.curriculo = this.formulario.controls.curriculo.value;
+    //this.candidato.status = 1;
     console.log(this.formulario.value);
     console.log(this.candidato);
     this.candidatoService.cadastrarCandidato(this.candidato).subscribe(async response => {
       console.log(response);
+      alert(response == null ? "Candidato cadastrado com sucesso!" : "Não foi possível cadastrar o candidato.");
+          window.location.href = "../pagina-inicial";
     });
-    this.route.navigate(["/pagina-inicial"]);
   }
   
 
