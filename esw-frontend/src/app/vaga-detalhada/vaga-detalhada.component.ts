@@ -72,7 +72,9 @@ export class VagaDetalhadaComponent implements OnInit {
       console.log("Não Foi");
       //mostrar que não foi
     } else {
-      console.log("Foi");
+      //this.candidatoService.editarCandidato(candidato).subscribe( res => {
+      //  console.log(res);
+      //});      
       //chamar o put
       //redirecionar
     }

@@ -3,6 +3,7 @@ package com.fatec.dto;
 import java.util.List;
 
 import com.fatec.esw.domain.Candidato;
+import com.fatec.esw.domain.Vaga;
 import com.sun.istack.NotNull;
 
 public class CandidatoFiltradoDTO {
@@ -30,7 +31,7 @@ public class CandidatoFiltradoDTO {
 	@NotNull
 	private Boolean funcionario;
 		
-	private List<Long> vagas;
+	private List<Vaga> vagas;
 	
 	public CandidatoFiltradoDTO(Candidato candidato) {
 		
@@ -38,19 +39,21 @@ public class CandidatoFiltradoDTO {
 	
 
 
-	public CandidatoFiltradoDTO(String cpf, String email, String nome, String telefone, String curriculo,
-			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario, Long id) {
-		this.cpf = cpf;
-		this.email = email;
-		this.nome = nome;
-		this.telefone = telefone;
-		this.curriculo = curriculo;
-		this.cargoAtual = cargoAtual;
-		this.dataAdmissao = dataAdmissao;
-		this.marcadores = marcadores;
-		this.funcionario = funcionario;
-		this.id = id;
-	}
+//	public CandidatoFiltradoDTO(String cpf, String email, String nome, String telefone, String curriculo,
+//			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario, Long id, String status, List<Vaga> vagas) {
+//		this.cpf = cpf;
+//		this.email = email;
+//		this.nome = nome;
+//		this.telefone = telefone;
+//		this.curriculo = curriculo;
+//		this.cargoAtual = cargoAtual;
+//		this.dataAdmissao = dataAdmissao;
+//		this.marcadores = marcadores;
+//		this.funcionario = funcionario;
+//		this.status = status;
+//		this.vagas = vagas;
+//		this.id = id;
+//	}
 	
 	public CandidatoFiltradoDTO(String cpf, String email, String nome, String telefone, String curriculo,
 			String cargoAtual, String dataAdmissao, String marcadores, Boolean funcionario, Long id, String status) {
@@ -151,13 +154,13 @@ public class CandidatoFiltradoDTO {
 
 
 
-	public List<Long> getVagas() {
+	public List<Vaga> getVagas() {
 		return vagas;
 	}
 
 
 
-	public void setVagas(List<Long> vagas) {
+	public void setVagas(List<Vaga> vagas) {
 		this.vagas = vagas;
 	}
 	

@@ -75,6 +75,12 @@ public class CandidatoResource {
 		List<CandidatoFiltradoDTO> listaCandidatos = candidatoService.buscarListaCandidatosFiltrados(nome, cpf, marcadores);
 		return ResponseEntity.ok().body(listaCandidatos);
 	}
+	
+//	@PutMapping("/cadastrarNaVaga")
+//	public ResponseEntity<CandidatoEditadoDTO> cadastrarNaVaga(@RequestBody CandidatoEditadoDTO candidato) {
+//		candidatoService.cadastrarNaVaga(candidato);
+//		return ResponseEntity.noContent().build();
+//	}
 }
 
 	

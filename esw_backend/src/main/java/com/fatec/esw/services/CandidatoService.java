@@ -8,6 +8,8 @@ import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Join;
+import javax.persistence.criteria.JoinType;
 import javax.persistence.criteria.Path;
 import javax.persistence.criteria.Root;
 
@@ -18,6 +20,7 @@ import com.fatec.dto.CandidatoDTO;
 import com.fatec.dto.CandidatoEditadoDTO;
 import com.fatec.dto.CandidatoFiltradoDTO;
 import com.fatec.esw.domain.Candidato;
+import com.fatec.esw.domain.Vaga;
 import com.fatec.esw.repositories.CandidatoRepository;
 
 @Service
@@ -84,7 +87,8 @@ public class CandidatoService {
 		Root<Candidato> candidato = query.from(Candidato.class);
 		
 		query.multiselect(candidato.get("cpf"), candidato.get("email"), candidato.get("nome"), candidato.get("telefone"), candidato.get("curriculo"),
-				candidato.get("cargoAtual"), candidato.get("dataAdmissao"), candidato.get("marcadores"), candidato.get("funcionario"), candidato.get("id"));
+				candidato.get("cargoAtual"), candidato.get("dataAdmissao"), candidato.get("marcadores"), candidato.get("funcionario"), candidato.get("id"),
+				candidato.get("status"));
 		
 		List<javax.persistence.criteria.Predicate> predicateList = new ArrayList<>();
 		
@@ -143,6 +147,26 @@ public List<CandidatoFiltradoDTO> buscarListaCandidatosFiltrados(String nome, St
 		return lista;
 
 	}
+
+//	public Candidato cadastrarNaVaga(CandidatoEditadoDTO candidatoEditadoDTO) {
+//	
+//	Candidato candidato = candidatoEditadoDTO.inserirEntidade(candidatoEditadoDTO);
+//	candidato.setId(candidatoEditadoDTO.getId() != null ? candidatoEditadoDTO.getId() : null);
+//	candidato.setCpf(candidatoEditadoDTO.getCpf() != null ? candidatoEditadoDTO.getCpf() : null);
+//	candidato.setEmail(candidatoEditadoDTO.getEmail() != null ? candidatoEditadoDTO.getEmail() : null);
+//	candidato.setNome(candidatoEditadoDTO.getNome() != null ? candidatoEditadoDTO.getNome() : null);
+//	candidato.setTelefone(candidatoEditadoDTO.getTelefone() != null ? candidatoEditadoDTO.getTelefone() : null);
+//	candidato.setCurriculo(candidatoEditadoDTO.getCurriculo() != null ? candidatoEditadoDTO.getCurriculo() : null);
+//	candidato.setCargoAtual(candidatoEditadoDTO.getCargoAtual() != null ? candidatoEditadoDTO.getCargoAtual(): null);
+//	candidato.setDataAdmissao(candidatoEditadoDTO.getDataAdmissao() != null ? candidatoEditadoDTO.getDataAdmissao(): null);
+//	candidato.setMarcadores(candidatoEditadoDTO.getMarcadores() != null ? candidatoEditadoDTO.getMarcadores(): null);
+//	candidato.setVagas(candidatoEditadoDTO.getVagas() != null ? candidatoEditadoDTO.getVagas(): null);
+//
+//	candidato.setFuncionario(candidatoEditadoDTO.getFuncionario());
+//	candidatoRepository.save(candidato);
+//	return candidato;
+//}
+
 
 
 }
