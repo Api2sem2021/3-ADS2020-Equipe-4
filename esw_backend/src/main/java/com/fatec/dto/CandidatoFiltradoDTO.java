@@ -63,6 +63,7 @@ public class CandidatoFiltradoDTO {
 		this.dataAdmissao = dataAdmissao;
 		this.marcadores = marcadores;
 		this.funcionario = funcionario;
+		this.status = status;
 		this.id = id;
 	}
 	
