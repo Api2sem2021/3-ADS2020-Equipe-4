@@ -36,8 +36,8 @@ export class ListaCandidatosComponent implements OnInit {
 
   buscarCandidatos() {
     this.candidatosService.buscarCandidatos().subscribe( res => {
-          let candidatos = res;
-          console.log(this.candidatos);
+      this.candidatos = res;
+      console.log(this.candidatos);
       }
     );
   }
