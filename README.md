@@ -3,9 +3,9 @@ Repositório para o Projeto de Engenharia de Software II na FATEC SJC
 Este projeto é um sistema de recrutamento e seleção para a empresa GSW, onde as pessoas podem se candidatar às vagas de trabalho e o administrador de sistema vai ver seus status, administrar vagas, etc.
 
 # Team
-- Scrum Master: Isabella Rosa
-- PO: Gabriel Azevedo
-- Devs: Ângelo Lima, Larissa Miho e Maria Eduarda
+- Scrum Master: [Isabella Rosa](https://www.linkedin.com/in/isabellarps)
+- PO: [Gabriel Souza](https://www.linkedin.com/in/gabrielsouzati/)
+- Devs: [Ângelo Lima](https://www.linkedin.com/in/%C3%A2ngelo-lima-0003201b0/), [Larissa Miho](https://www.linkedin.com/in/miho-takahashi-95b78695) e [Maria Eduarda Oliveira](http://linkedin.com/in/eduarda-oliveira-6a0835181)
 
 # Sprint 0
 - Definição de Stakeholders
