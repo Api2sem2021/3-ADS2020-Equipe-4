@@ -25,10 +25,12 @@ import { ListaCandidatosComponent } from './lista-candidatos/lista-candidatos.co
 import { ListaCandidatosModule } from './lista-candidatos/lista-candidatos.module';
 import { DadosCandidatosComponent } from './dados-candidatos/dados-candidatos.component';
 import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.module';
+import { EditarVagaComponent } from './editar-vaga/editar-vaga.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EditarVagaComponent
   ],
   imports: [
     BrowserAnimationsModule,
