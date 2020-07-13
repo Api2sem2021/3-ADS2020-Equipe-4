@@ -148,24 +148,7 @@ public List<CandidatoFiltradoDTO> buscarListaCandidatosFiltrados(String nome, St
 
 	}
 
-//	public Candidato cadastrarNaVaga(CandidatoEditadoDTO candidatoEditadoDTO) {
-//	
-//	Candidato candidato = candidatoEditadoDTO.inserirEntidade(candidatoEditadoDTO);
-//	candidato.setId(candidatoEditadoDTO.getId() != null ? candidatoEditadoDTO.getId() : null);
-//	candidato.setCpf(candidatoEditadoDTO.getCpf() != null ? candidatoEditadoDTO.getCpf() : null);
-//	candidato.setEmail(candidatoEditadoDTO.getEmail() != null ? candidatoEditadoDTO.getEmail() : null);
-//	candidato.setNome(candidatoEditadoDTO.getNome() != null ? candidatoEditadoDTO.getNome() : null);
-//	candidato.setTelefone(candidatoEditadoDTO.getTelefone() != null ? candidatoEditadoDTO.getTelefone() : null);
-//	candidato.setCurriculo(candidatoEditadoDTO.getCurriculo() != null ? candidatoEditadoDTO.getCurriculo() : null);
-//	candidato.setCargoAtual(candidatoEditadoDTO.getCargoAtual() != null ? candidatoEditadoDTO.getCargoAtual(): null);
-//	candidato.setDataAdmissao(candidatoEditadoDTO.getDataAdmissao() != null ? candidatoEditadoDTO.getDataAdmissao(): null);
-//	candidato.setMarcadores(candidatoEditadoDTO.getMarcadores() != null ? candidatoEditadoDTO.getMarcadores(): null);
-//	candidato.setVagas(candidatoEditadoDTO.getVagas() != null ? candidatoEditadoDTO.getVagas(): null);
-//
-//	candidato.setFuncionario(candidatoEditadoDTO.getFuncionario());
-//	candidatoRepository.save(candidato);
-//	return candidato;
-//}
+
 
 
 

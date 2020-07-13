@@ -10,5 +10,5 @@ export class CandidatoVaga {
     cargoAtual?: string;
     funcionario?: boolean;
     status?: string;
-    vagas?: any[];
+    idVaga?: number;
 }

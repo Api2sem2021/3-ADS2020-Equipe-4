@@ -21,6 +21,7 @@ import com.fatec.dto.CandidatoDTO;
 import com.fatec.dto.CandidatoEditadoDTO;
 import com.fatec.dto.CandidatoFiltradoDTO;
 import com.fatec.esw.domain.Candidato;
+import com.fatec.esw.domain.Vaga;
 import com.fatec.esw.services.CandidatoService;
 
 @CrossOrigin()
@@ -75,12 +76,9 @@ public class CandidatoResource {
 		List<CandidatoFiltradoDTO> listaCandidatos = candidatoService.buscarListaCandidatosFiltrados(nome, cpf, marcadores);
 		return ResponseEntity.ok().body(listaCandidatos);
 	}
+
 	
-//	@PutMapping("/cadastrarNaVaga")
-//	public ResponseEntity<CandidatoEditadoDTO> cadastrarNaVaga(@RequestBody CandidatoEditadoDTO candidato) {
-//		candidatoService.cadastrarNaVaga(candidato);
-//		return ResponseEntity.noContent().build();
-//	}
+
 }
 
 	

@@ -167,6 +167,10 @@ public class Candidato implements Serializable{
     public void setVagas(List<Vaga> vagas) {
         this.vagas = vagas;
     }
+    
+    public void adicionarVaga(Vaga vaga) {
+        this.vagas.add(vaga);
+    }
 
 	public String getCargoAtual() {
 		return cargoAtual;

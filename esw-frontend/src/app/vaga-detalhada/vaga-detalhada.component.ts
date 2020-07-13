@@ -1,3 +1,4 @@
+import { CandidatoVaga } from './../model/candidato-vaga';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Candidato } from './../model/candidato';
 import { CandidatoService } from './../services/candidato.service';
@@ -16,6 +17,7 @@ export class VagaDetalhadaComponent implements OnInit {
 
   vaga: Vaga = new Vaga();
   candidato: Candidato = new Candidato();
+  candidatoEnvio: Candidato = new Candidato();
   id: number;
   formulario: FormGroup;
 
@@ -70,15 +72,15 @@ export class VagaDetalhadaComponent implements OnInit {
     console.log(candidato);
     if(candidato.length == 0){
       console.log("Não Foi");
-      //mostrar que não foi
     } else {
-      //this.candidatoService.editarCandidato(candidato).subscribe( res => {
-      //  console.log(res);
-      //});      
-      //chamar o put
-      //redirecionar
-    }
-    
+      candidato.forEach(element => {
+        console.log(element);
+        this.candidatoService.buscarCandidatos().subscribe(async response => {
+          alert(response == null ? "Candidato editado com sucesso!" : "Não foi possível salvar a edição do candidato.");
+          window.location.href = "../pagina-inicial";
+      });   
+      });
+    }    
   }
 
 }
