@@ -42,3 +42,9 @@ Branch para desenvolvimento: Develop
 - Diagrama de Classes (Não necessitou de alterações)
 - Funcionalidades implementadas: Front-end HTML, CSS, Bootstrap e Javascript
 - Estudo da ligação do front-end e back-end
+
+# Sprint 5 (Final)
+- Revisão Wireframes
+- Revisão e Atualização dos Casos de Teste
+- Estimativa de Esforço no Trello
+- Todas as funcionalidades implementadas
