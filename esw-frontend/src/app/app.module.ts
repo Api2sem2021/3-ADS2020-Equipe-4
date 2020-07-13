@@ -1,3 +1,4 @@
+import { EditarVagaModule } from './editar-vaga/editar-vaga.module';
 import { StatusCandidatoModule } from './status-candidato/status-candidato.module';
 import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 import { VagaDetalhadaModule } from './vaga-detalhada/vaga-detalhada.module';
@@ -25,12 +26,10 @@ import { ListaCandidatosComponent } from './lista-candidatos/lista-candidatos.co
 import { ListaCandidatosModule } from './lista-candidatos/lista-candidatos.module';
 import { DadosCandidatosComponent } from './dados-candidatos/dados-candidatos.component';
 import { DadosCandidatosModule } from './dados-candidatos/dados-candidatos.module';
-import { EditarVagaComponent } from './editar-vaga/editar-vaga.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EditarVagaComponent
+    AppComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -49,7 +48,8 @@ import { EditarVagaComponent } from './editar-vaga/editar-vaga.component';
     LoginModule,
     ListaCandidatosModule,
     DadosCandidatosModule,
-    VagaDetalhadaModule
+    VagaDetalhadaModule,
+    EditarVagaModule
   ],
   providers: [
     AutenticacaoService

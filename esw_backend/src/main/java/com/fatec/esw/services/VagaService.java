@@ -6,7 +6,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fatec.dto.CandidatoEditadoDTO;
 import com.fatec.dto.VagaDTO;
+import com.fatec.esw.domain.Candidato;
 import com.fatec.esw.domain.Vaga;
 import com.fatec.esw.repositories.VagaRepository;
 
@@ -42,5 +44,19 @@ public class VagaService {
 		return vaga;
 	}
 	
+public Vaga editar(VagaDTO vagaDTO) {
+		
+	Vaga vaga = vagaDTO.inserirEntidade(vagaDTO);
 	
+	vaga.setId(vagaDTO.getId() != null ? vagaDTO.getId() : null);
+	vaga.setNome(vagaDTO.getNome() != null ? vagaDTO.getNome() : null);
+	vaga.setObservações(vagaDTO.getObservações() != null ? vagaDTO.getObservações() : null);
+	vaga.setRequisitos(vagaDTO.getRequisitos() != null ? vagaDTO.getRequisitos() : null);
+	vaga.setDescricaoDetalhada(vagaDTO.getDescricaoDetalhada() != null ? vagaDTO.getDescricaoDetalhada() : null);
+	vaga.setDescricaoBreve(vagaDTO.getDescricaoBreve() != null ? vagaDTO.getDescricaoBreve() : null);
+	vaga.setData(vagaDTO.getData() != null ? vagaDTO.getData() : null);
+	vagaRepository.save(vaga);
+	return vaga;
+	
+	}
 }

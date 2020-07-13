@@ -1,3 +1,4 @@
+import { AutenticacaoService } from './../login/autenticacao.service';
 import { Router } from '@angular/router';
 import { Vaga } from './../model/vaga';
 import { VagasService } from './../services/vagas.service';
@@ -12,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaInicialComponent implements OnInit {
 
+  mostrarItensAdm: boolean = false;
   formulario: FormGroup;
   login: Login = new Login();
   vagas: any[];
@@ -19,7 +21,8 @@ export class PaginaInicialComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private vagasService: VagasService,
-    private route: Router
+    private route: Router,
+    private autenticacaoService: AutenticacaoService
   ) {
     this.formulario = this.formBuilder.group({
 
@@ -30,13 +33,22 @@ export class PaginaInicialComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.autenticacaoService.liberarItensAdm.subscribe(
+      res => this.mostrarItensAdm = res
+    );
     this.buscarVagas();
+    console.log(this.mostrarItensAdm);
   }
 
 
   cadastrarNaVaga(id: number) {
     console.log(id);
     this.route.navigate([`/vaga-detalhada/${id}`]);
+  }
+
+  editarVaga(id: number) {
+    console.log(id);
+    this.route.navigate([`/editar-vaga/${id}`]);
   }
 
   aplicaCssErro(campo: string) {

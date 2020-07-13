@@ -25,4 +25,8 @@ import { Observable } from 'rxjs';
     public buscarVagaPorId(id: number) {
       return this.http.get(`http://localhost:8080/vagas/${id}`);
     }
+
+    public editarVaga(vaga: Vaga){
+      return this.http.put(`http://localhost:8080/vagas`, vaga);
+    }
 }

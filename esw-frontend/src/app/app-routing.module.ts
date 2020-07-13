@@ -1,3 +1,4 @@
+import { EditarVagaComponent } from './editar-vaga/editar-vaga.component';
 import { StatusCandidatoComponent } from './status-candidato/status-candidato.component';
 import { VagaDetalhadaComponent } from './vaga-detalhada/vaga-detalhada.component';
 import { LoginComponent } from './login/login.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: "cadastro-funcionario", component: CadastroFuncionarioComponent},
   { path: "login", component: LoginComponent},
   { path: "lista-candidatos", component: ListaCandidatosComponent},
+  { path: "editar-vaga", component: EditarVagaComponent},
   //{ path: "dados-candidatos", component: },
   { path: '', pathMatch: 'full', redirectTo: 'pagina-inicial' }
 ];

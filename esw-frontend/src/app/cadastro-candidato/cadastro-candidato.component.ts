@@ -1,3 +1,4 @@
+import { CandidatoCadastro } from './../model/candidatoCadastro';
 import { Router } from '@angular/router';
 import { CandidatoService } from './../services/candidato.service';
 import { Candidato } from './../model/candidato';
@@ -12,6 +13,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class CadastroCandidatoComponent implements OnInit {
   scrollUp: any;
   formulario: FormGroup;
+  candidatoCadastro: CandidatoCadastro = new CandidatoCadastro();
   candidato: Candidato = new Candidato();
   constructor(
     private formBuilder: FormBuilder,
@@ -46,16 +48,16 @@ export class CadastroCandidatoComponent implements OnInit {
   }
 
   cadastrar() {
-    this.candidato.nome = this.formulario.controls.nome.value;
-    this.candidato.cpf = this.formulario.controls.cpf.value;
-    this.candidato.email = this.formulario.controls.email.value;
-    this.candidato.telefone = this.formulario.controls.telefone.value;
-    this.candidato.curriculo = this.formulario.controls.curriculo.value;
-    this.candidato.status = this.formulario.controls.curriculo.value;
+    this.candidatoCadastro.nome = this.formulario.controls.nome.value;
+    this.candidatoCadastro.cpf = this.formulario.controls.cpf.value;
+    this.candidatoCadastro.email = this.formulario.controls.email.value;
+    this.candidatoCadastro.telefone = this.formulario.controls.telefone.value;
+    this.candidatoCadastro.curriculo = this.formulario.controls.curriculo.value;
+    this.candidatoCadastro.status = "Inscrito";
     //this.candidato.status = 1;
     console.log(this.formulario.value);
-    console.log(this.candidato);
-    this.candidatoService.cadastrarCandidato(this.candidato).subscribe(async response => {
+    console.log(this.candidatoCadastro);
+    this.candidatoService.cadastrarCandidato(this.candidatoCadastro).subscribe(async response => {
       console.log(response);
       alert(response == null ? "Candidato cadastrado com sucesso!" : "Não foi possível cadastrar o candidato.");
           window.location.href = "../pagina-inicial";

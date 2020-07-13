@@ -35,7 +35,7 @@ public class EswBackendApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		Status status1 = new Status(null, "A", "Aprovado");
-		Status status2 = new Status(null, "E", "Em andamento");
+		Status status2 = new Status(null, "E", "Inscrito");
 		Status status3 = new Status(null, "R", "Reprovado");
 		statusRepository.save(status1);
 		statusRepository.save(status2);

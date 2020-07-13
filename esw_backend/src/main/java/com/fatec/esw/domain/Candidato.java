@@ -57,6 +57,7 @@ public class Candidato implements Serializable{
 		this.funcionario = false;
 	}
 	
+	
 	public Candidato(String cpf, String email, String nome, String telefone, String curriculo) {
 		super();
 		this.cpf = cpf;
@@ -78,23 +79,27 @@ public class Candidato implements Serializable{
 		this.marcadores = marcadores;
 		this.funcionario = funcionario;
 	}
-
+	
 	public Candidato(Long id, String cpf, String email, String nome, String telefone, String curriculo, String status,
 			String marcadores, String cargoAtual, String dataAdmissao, Boolean funcionario, List<Vaga> vagas) {
-		super();
-		this.id = id;
 		this.cpf = cpf;
 		this.email = email;
 		this.nome = nome;
 		this.telefone = telefone;
 		this.curriculo = curriculo;
-		this.status = status;
-		this.marcadores = marcadores;
 		this.cargoAtual = cargoAtual;
 		this.dataAdmissao = dataAdmissao;
+		this.marcadores = marcadores;
 		this.funcionario = funcionario;
 		this.vagas = vagas;
+		this.id = id;
+		this.status = status;
 	}
+	
+
+
+
+
 
 	public Long getId() {
 		return id;
@@ -166,10 +171,6 @@ public class Candidato implements Serializable{
     
     public void setVagas(List<Vaga> vagas) {
         this.vagas = vagas;
-    }
-    
-    public void adicionarVaga(Vaga vaga) {
-        this.vagas.add(vaga);
     }
 
 	public String getCargoAtual() {

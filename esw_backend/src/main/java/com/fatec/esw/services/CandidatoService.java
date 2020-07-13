@@ -53,6 +53,7 @@ public class CandidatoService {
 		candidato.setNome(candidatoDTO.getNome() != null ? candidatoDTO.getNome() : null);
 		candidato.setTelefone(candidatoDTO.getTelefone() != null ? candidatoDTO.getTelefone() : null);
 		candidato.setCurriculo(candidatoDTO.getCurriculo() != null ? candidatoDTO.getCurriculo() : null);
+		candidato.setStatus("Inscrito");
 		candidatoRepository.save(candidato);
 		return candidato;
 	}

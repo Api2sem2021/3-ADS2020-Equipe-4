@@ -9,11 +9,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import com.fatec.dto.CandidatoEditadoDTO;
 import com.fatec.dto.VagaDTO;
 import com.fatec.esw.domain.Vaga;
 import com.fatec.esw.services.VagaService;
@@ -45,6 +47,12 @@ public class VagaResource {
 		URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
 				.buildAndExpand(vaga.getId()).toUri();
 		return ResponseEntity.created(uri).build();
+	}
+	
+	@PutMapping()
+	public ResponseEntity<VagaDTO> editar(@RequestBody VagaDTO vaga) {
+		vagaService.editar(vaga);
+		return ResponseEntity.noContent().build();
 	}
 }
 
