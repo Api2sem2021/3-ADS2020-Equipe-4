@@ -35,11 +35,12 @@ export class StatusCandidatoComponent implements OnInit {
   ngOnInit() {
     this.CandidatoService.buscarCandidatos().subscribe( res => {
       this.candidatos = res;
+      console.log(this.candidatos);
       for (let i = 0; this.candidatos.length; i++){
         this.candidato = this.candidatos[i];
 
         switch (this.candidato.status){
-          case 'Candidatado':
+          case 'Inscrito':
             this.subscribed.push(this.candidato.nome)
             break;
           case 'Selecionado':

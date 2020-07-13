@@ -4,7 +4,7 @@ import { Vaga } from './../model/vaga';
 import { VagasService } from './../services/vagas.service';
 import { Login } from './../model/login';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-pagina-inicial',
@@ -33,11 +33,8 @@ export class PaginaInicialComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.autenticacaoService.liberarItensAdm.subscribe(
-      res => this.mostrarItensAdm = res
-    );
+    this.mostrarItensAdm = this.autenticacaoService.getAutenticado();
     this.buscarVagas();
-    console.log(this.mostrarItensAdm);
   }
 
 

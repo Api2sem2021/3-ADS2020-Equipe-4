@@ -24,4 +24,8 @@ export class AutenticacaoService {
       this.liberarItensAdm.emit(false);
     }
   }
+
+  getAutenticado () {
+    return this.autenticado;
+  }
 }
